@@ -9,9 +9,9 @@
     :root{
       --navy:#1A365D;
       --navy-ink:#243B6B;
-      --gold:#B7791F;
-      --gold-2:#D69E2E;
-      --bg:#F7F9FC;
+      --gold:#B8860B;
+      --gold-2:#B8860B;
+      --bg:#E9ECF3;
       --panel:#FFFFFF;
       --text:#0F172A;
       --muted:#475569;
@@ -31,11 +31,12 @@
       border-bottom:1px solid var(--line);}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
     .brand{display:flex; align-items:center; gap:10px; font-weight:800; color:var(--navy)}
-    .logo{width:40px; height:40px; display:grid; place-items:center; border-radius:10px;
+    .brand-logo{width:40px; height:40px; object-fit:contain; border-radius:8px; border:1px solid var(--line); background:#fff}
+    .logo-fallback{width:40px; height:40px; display:grid; place-items:center; border-radius:10px;
       background:conic-gradient(from 160deg, var(--gold), var(--gold-2)); color:#111; font-weight:900; border:1px solid #e8c37a}
     .navlinks{display:flex; gap:16px; align-items:center}
     .ghost{padding:10px 14px; border-radius:999px; border:1px solid var(--line); color:var(--navy)}
-    .cta{padding:10px 16px; border-radius:999px; background:linear-gradient(135deg, var(--gold), var(--gold-2)); color:#111; font-weight:800; border:1px solid #e8c37a}
+    .cta{padding:10px 16px; border-radius:999px; background:var(--gold); color:#111; font-weight:800; border:1px solid #e8c37a}
     /* HERO */
     .hero{padding:70px 0 30px; background:linear-gradient(180deg,#fff, #f8fafc)}
     .grid-hero{display:grid; grid-template-columns:1.1fr .9fr; gap:40px}
@@ -58,10 +59,13 @@
     .value{display:flex; gap:14px; align-items:flex-start}
     .icon{width:56px; height:56px; flex:0 0 56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line)}
     .icon svg{width:32px; height:32px; fill:var(--gold)}
+    /* Practice icons top */
+    .practice-icon{width:64px; height:64px; border-radius:16px; border:1px solid var(--line); display:grid; place-items:center; background:#fff; margin-bottom:10px}
+    .practice-icon svg{width:34px; height:34px; fill:var(--navy)}
     /* Team cards bigger */
-    .team-card{display:flex; flex-direction:column; gap:10px; min-height:260px; padding:26px}
-    .avatar-photo{width:170px; height:170px; border-radius:50%; object-fit:cover; border:3px solid #e8c37a}
-    .avatar-initials{width:120px; height:120px; border-radius:50%; display:grid; place-items:center; background:#fff; border:1px solid var(--line); color:var(--navy); font-weight:800; font-size:36px}
+    .team-card{display:flex; flex-direction:column; gap:12px; min-height:300px; padding:28px}
+    .avatar-photo{width:180px; height:180px; border-radius:50%; object-fit:cover; border:3px solid #e8c37a; display:block}
+    .avatar-initials{width:130px; height:130px; border-radius:50%; display:grid; place-items:center; background:#fff; border:1px solid var(--line); color:var(--navy); font-weight:800; font-size:38px}
     .team-header{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
     .contact .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
     .contact form{background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px}
@@ -78,7 +82,8 @@
   <header>
     <nav class="container nav" aria-label="Primary">
       <a href="#home" class="brand" aria-label="Global Justice Inc. Home">
-        <div class="logo" aria-hidden="true">⚖️</div>
+        <img src="LOGO.PNG" alt="Firm logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="logo-fallback" aria-hidden="true" style="display:none">⚖️</div>
         <span>Global Justice Inc.</span>
       </a>
       <div class="navlinks">
@@ -204,15 +209,45 @@
       <h2>Practice areas</h2>
       <p class="lead">Focus where we create the most impact.</p>
       <div class="grid3">
-        <div class="card"><b>Labor & Employment</b><p class="muted">Contracts, wrongful termination, workplace policies, payroll compliance.</p><span class="chip">Mediation</span> <span class="chip">CST</span></div>
-        <div class="card"><b>Administrative Law</b><p class="muted">FOI petitions, sanctions, procurement, public‑law remedies.</p><span class="chip">Writs</span> <span class="chip">Due process</span></div>
-        <div class="card"><b>Civil & Contracts</b><p class="muted">Drafting, negotiation, enforceability, and dispute prevention.</p><span class="chip">Drafting</span> <span class="chip">Analysis</span></div>
+        <div class="card">
+          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M2 7h20v2H2V7zm2 4h16v8H4v-8zm3-7h10v2H7V4z"/></svg></div>
+          <b>Labor & Employment</b>
+          <p class="muted">Contracts, wrongful termination, workplace policies, payroll compliance.</p>
+          <span class="chip">Mediation</span> <span class="chip">CST</span>
+        </div>
+        <div class="card">
+          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 3h16v4H4V3zm0 6h16v12H4V9zm4 2v8h8v-8H8z"/></svg></div>
+          <b>Administrative Law</b>
+          <p class="muted">FOI petitions, sanctions, procurement, public‑law remedies.</p>
+          <span class="chip">Writs</span> <span class="chip">Due process</span>
+        </div>
+        <div class="card">
+          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg></div>
+          <b>Civil & Contracts</b>
+          <p class="muted">Drafting, negotiation, enforceability, and dispute prevention.</p>
+          <span class="chip">Drafting</span> <span class="chip">Analysis</span>
+        </div>
       </div>
       <div class="divider"></div>
       <div class="grid3">
-        <div class="card"><b>Human Rights</b><p class="muted">Strategic litigation and advocacy for vulnerable populations.</p><span class="chip">Advocacy</span></div>
-        <div class="card"><b>Compliance</b><p class="muted">Internal policies, risk mapping, and training materials.</p><span class="chip">Policies</span> <span class="chip">Audits</span></div>
-        <div class="card"><b>Legal Writing</b><p class="muted">Memos, briefs, and plain‑language summaries for clients and judges.</p><span class="chip">Plain language</span></div>
+        <div class="card">
+          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M12 3l4 8H8l4-8zm-6 9h12l-6 9-6-9z"/></svg></div>
+          <b>Human Rights</b>
+          <p class="muted">Strategic litigation and advocacy for vulnerable populations.</p>
+          <span class="chip">Advocacy</span>
+        </div>
+        <div class="card">
+          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M3 4h18v2H3V4zm2 4h14v12H5V8zm4 2v8h6v-8H9z"/></svg></div>
+          <b>Compliance</b>
+          <p class="muted">Internal policies, risk mapping, and training materials.</p>
+          <span class="chip">Policies</span> <span class="chip">Audits</span>
+        </div>
+        <div class="card">
+          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M6 2h12v4H6V2zm-2 6h16v14H4V8zm4 2v10h8V10H8z"/></svg></div>
+          <b>Legal Writing</b>
+          <p class="muted">Memos, briefs, and plain‑language summaries for clients and judges.</p>
+          <span class="chip">Plain language</span>
+        </div>
       </div>
     </div>
   </section>
@@ -226,7 +261,8 @@
         <!-- Jhoger -->
         <div class="card team-card" aria-label="Profile – Lead Attorney">
           <div class="team-header">
-            <img src="jhoger.png" alt="Jhoger Guerrero photo" class="avatar-photo" />
+            <img src="JHOGER.PNG" alt="Jhoger Guerrero photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="avatar-initials" style="display:none" aria-hidden="true">JG</div>
             <div>
               <b>Jhoger Guerrero</b>
               <div class="muted">Founder • Labor & Administrative Law Attorney</div>
@@ -291,16 +327,31 @@
           </div>
         </form>
         <div class="card">
-          <b>Office</b>
-          <p class="muted">Bogotá D.C., Colombia</p>
-          <b>Hours</b>
-          <p class="muted">Mon–Fri: 8:30–18:00</p>
-          <b>Email</b>
-          <p><a href="mailto:globaljustice@gmail.com">globaljustice@gmail.com</a></p>
-          <b>Phone</b>
-          <p class="muted">+57 322 786 2315</p>
-          <b>Social</b>
-          <p><a href="#">LinkedIn</a> · <a href="#">GitHub Pages</a></p>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px">
+            <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10v3H7V2zm-2 5h14v15H5V7zm5 2v3h4V9H10z"/></svg></div>
+            <div>
+              <b>Office</b>
+              <p class="muted" style="margin:4px 0 0">Bogotá D.C., Colombia</p>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; margin:10px 0">
+            <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11 11 0 003.4.54 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11 11 0 00.54 3.4 1 1 0 01-.24 1l-2.2 2.2z"/></svg></div>
+            <div>
+              <b>Phone / WhatsApp</b>
+              <p class="muted" style="margin:4px 0 0">+57 322 786 2315</p>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:12px; margin:10px 0">
+            <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm4 3h8v2H8V7zm0 4h8v2H8v-2zm0 4h6v2H8v-2z"/></svg></div>
+            <div>
+              <b>Email</b>
+              <p style="margin:4px 0 0"><a href="mailto:globaljustice@gmail.com">globaljustice@gmail.com</a></p>
+            </div>
+          </div>
+          <div style="display:flex; gap:10px; margin-top:12px">
+            <a class="ghost" href="mailto:globaljustice@gmail.com">Write email</a>
+            <a class="ghost" target="_blank" rel="noopener" href="https://wa.me/573227862315">Open WhatsApp</a>
+          </div>
         </div>
       </div>
     </div>
