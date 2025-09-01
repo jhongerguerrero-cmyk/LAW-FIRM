@@ -3,109 +3,85 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>GLOBAL JUSTICE INC. | Defending Rights, Delivering Justice</title>
-  <meta name="description" content="LexNova Attorneys — a boutique law firm. Who we are, our values, practice areas, and professional profiles. Bilingual EN/ES template for law students." />
+  <title>Global Justice Inc. | Defending Rights, Delivering Justice.</title>
+  <meta name="description" content="Global Justice Inc. — Defending Rights, Delivering Justice.. Law firm one‑page template for coursework." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0f172a;         /* slate-900 */
-      --panel:#111827cc;    /* semi-dark panel */
-      --text:#e5e7eb;       /* gray-200 */
-      --muted:#9ca3af;      /* gray-400 */
-      --brand:#06b6d4;      /* cyan-500 */
-      --accent:#a78bfa;     /* violet-400 */
-      --card:#111827;       /* slate-900 solid */
-      --ring:#22d3ee33;     /* cyan-400 low opacity */
+      --blue:#0B1D3A;     /* navy (trust/authority) */
+      --gold:#FFD700;     /* justice scales accent */
+      --white:#FFFFFF;    /* clarity/ethics */
+      --gray:#cbd3e4;     /* neutrality */
+      --panel:#0f1a33cc;  /* glassy panel */
+      --ring:#ffd70033;   /* focus ring in gold */
     }
-    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
     body{
-      margin:0; font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--text); background:radial-gradient(1200px 600px at 10% -10%, #164e63 0%, transparent 60%),
-      radial-gradient(1000px 600px at 110% 10%, #312e81 0%, transparent 55%),
-      var(--bg);
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:var(--white);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #153466 0%, transparent 60%),
+        radial-gradient(1000px 600px at 110% 10%, #1c2748 0%, transparent 55%),
+        var(--blue);
     }
     a{color:inherit; text-decoration:none}
-    .container{width:min(1100px, 92%); margin-inline:auto}
-    header{
-      position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px);
-      background:linear-gradient(180deg, #0b1020cc 0%, #0b102000 100%);
-      border-bottom:1px solid #ffffff14;
-    }
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
-    .brand{display:flex; align-items:center; gap:10px; font-weight:800}
-    .logo{width:36px; height:36px; display:grid; place-items:center; border-radius:12px; background:linear-gradient(135deg, var(--brand), var(--accent)); box-shadow:0 8px 30px #0008}
-    .logo span{font-weight:800; color:#0b1020}
-    .nav a{opacity:.9}
-    .navlinks{display:flex; gap:18px; align-items:center}
-    .cta{padding:10px 16px; border-radius:999px; background:linear-gradient(135deg, var(--brand), var(--accent)); color:#081226; font-weight:700; box-shadow:0 10px 30px #0007}
-    .ghost{padding:10px 14px; border-radius:999px; border:1px solid #ffffff22}
-    .lang-toggle{cursor:pointer}
-
+    .container{width:min(1100px,92%); margin-inline:auto}
+    header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(140%) blur(10px);
+      background:linear-gradient(180deg, #0b1d3acc 0%, #0b1d3a00 100%); border-bottom:1px solid #ffffff22;}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+    .logo{width:44px; height:44px; display:grid; place-items:center; border-radius:12px;
+      background:conic-gradient(from 160deg, var(--gold), #eac600, var(--gold)); color:#1a1a1a; font-weight:900;
+      box-shadow:0 8px 26px #0008; border:1px solid #f1d46a; font-family:'Playfair Display', serif}
+    .navlinks{display:flex; gap:16px; align-items:center}
+    .ghost{padding:10px 14px; border-radius:999px; border:1px solid #ffffff26}
+    .cta{padding:10px 18px; border-radius:999px; background:linear-gradient(135deg, var(--gold), #e6c200);
+      color:#111; font-weight:800; box-shadow:0 10px 30px #0008}
     /* HERO */
-    .hero{padding:80px 0 40px; position:relative}
+    .hero{padding:90px 0 50px}
     .grid-hero{display:grid; grid-template-columns:1.1fr .9fr; gap:40px}
-    .title{font-family:Montserrat, Inter, sans-serif; font-size:clamp(28px, 6vw, 52px); line-height:1.02; letter-spacing:-.02em}
-    .subtitle{color:var(--muted); margin-top:10px}
-    .badge{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid #ffffff22; border-radius:999px; font-size:14px; color:#d1d5db; background:#02061766}
-    .hero-card{background:linear-gradient(180deg, #0b1020aa, #0b102088); border:1px solid #ffffff1a; border-radius:18px; padding:18px; box-shadow:0 20px 50px #0008}
-    .stat-row{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:18px}
-    .stat{background:var(--card); border:1px solid #ffffff18; border-radius:14px; padding:14px; text-align:center}
-    .stat b{font-size:22px}
-
+    .title{font-family:'Playfair Display', Georgia, serif; font-size:clamp(30px,6vw,56px); line-height:1.02; letter-spacing:.2px}
+    .subtitle{color:#e6e9f0; margin-top:10px}
+    .badge{display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border:1px solid #ffffff22;
+      border-radius:999px; font-size:14px; background:#0b1d3a88}
+    .hero-card{background:linear-gradient(180deg, var(--panel), #0b1d3a88); border:1px solid #ffffff22; border-radius:18px; padding:18px; box-shadow:0 20px 50px #0009}
+    .stat-row{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px}
+    .stat{background:#0e1731; border:1px solid #ffffff1f; border-radius:14px; padding:14px; text-align:center}
+    .stat b{font-size:22px; color:var(--gold)}
     /* Sections */
-    section{padding:70px 0}
-    h2{font-family:Montserrat, Inter, sans-serif; font-size:clamp(22px, 4vw, 36px); margin:0 0 18px}
-    p.lead{color:#cbd5e1; margin:0 0 16px}
-
-    .kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:16px}
-    .kpis .card, .values .card, .practice .card, .team .card{background:linear-gradient(180deg, #0b1020aa, #0b102055); border:1px solid #ffffff1a; border-radius:18px; padding:18px}
-
-    .values .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .values .icon{font-size:24px}
-
-    .practice .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-
-    .team .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
-    .avatar{width:64px; height:64px; border-radius:50%; background:linear-gradient(135deg, var(--brand), var(--accent)); display:grid; place-items:center; font-weight:800; color:#0b1020; margin-bottom:8px}
-    .role{color:var(--muted); font-size:14px}
-    .chip{display:inline-block; padding:6px 10px; font-size:12px; border:1px solid #ffffff22; border-radius:999px; margin:4px 6px 0 0}
-
+    section{padding:72px 0} h2{font-family:'Playfair Display', Georgia, serif; font-size:clamp(22px,4vw,36px); margin:0 0 18px; color:#f6f7fb}
+    p.lead{color:#dbe3f6; margin:0 0 16px}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{background:linear-gradient(180deg, #0b1d3a99, #0b1d3a55); border:1px solid #ffffff26; border-radius:18px; padding:18px}
+    .chip{display:inline-block; padding:6px 10px; font-size:12px; border:1px solid #ffffff26; border-radius:999px; margin:4px 6px 0 0; color:#eaeaea}
+    .muted{color:var(--gray)}
+    .team .avatar{width:64px; height:64px; border-radius:50%; background:radial-gradient(circle at 40% 30%, #ffe680, var(--gold)); display:grid; place-items:center; font-weight:800; color:#111; margin-bottom:8px; border:1px solid #f1d46a}
     .contact .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
-    .contact form{background:#0b1020aa; border:1px solid #ffffff1a; border-radius:16px; padding:18px}
-    label{font-size:14px; color:#cbd5e1}
-    input, textarea{width:100%; background:#0b1020; color:var(--text); border:1px solid #334155; border-radius:12px; padding:12px; margin-top:6px}
+    .contact form{background:#0b1d3acc; border:1px solid #ffffff26; border-radius:16px; padding:18px}
+    label{font-size:14px; color:#e6e9f0} input, textarea{width:100%; background:#0b1530; color:#fff; border:1px solid #334155; border-radius:12px; padding:12px; margin-top:6px}
     input:focus, textarea:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
-    .actions{display:flex; gap:10px; margin-top:10px}
-
-    footer{padding:50px 0; color:#9aa1ac; border-top:1px solid #ffffff14}
-
-    /* Responsive */
-    @media (max-width: 950px){
-      .grid-hero, .contact .grid{grid-template-columns:1fr}
-      .values .grid, .practice .grid, .team .grid{grid-template-columns:1fr 1fr}
-      .kpis{grid-template-columns:1fr 1fr}
-    }
-    @media (max-width: 620px){
-      .values .grid, .practice .grid, .team .grid{grid-template-columns:1fr}
-    }
+    footer{padding:50px 0; color:#cbd3e4; border-top:1px solid #ffffff22}
+    .divider{height:1px; background:linear-gradient(90deg, transparent, #ffffff22, transparent); margin:30px 0}
+    @media (max-width: 950px){ .grid-hero, .contact .grid{grid-template-columns:1fr} .grid3{grid-template-columns:1fr 1fr} }
+    @media (max-width: 620px){ .grid3{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
   <!-- Header -->
   <header>
     <nav class="container nav" aria-label="Primary">
-      <a href="#home" class="brand" aria-label="LexNova Home">
-        <div class="logo" aria-hidden="true"><span>LN</span></div>
-        <span>LexNova Attorneys</span>
+      <a href="#home" class="brand" aria-label="Global Justice Inc. Home">
+        <div class="logo" aria-hidden="true">⚖️</div>
+        <span>Global Justice Inc.</span>
       </a>
       <div class="navlinks">
-        <a href="#about" class="ghost" data-i18n="nav_about">About</a>
-        <a href="#values" class="ghost" data-i18n="nav_values">Values</a>
-        <a href="#practice" class="ghost" data-i18n="nav_practice">Practice</a>
-        <a href="#team" class="ghost" data-i18n="nav_team">Team</a>
-        <a href="#contact" class="cta" data-i18n="nav_contact">Contact</a>
-        <button id="langBtn" class="ghost lang-toggle" aria-pressed="false" aria-label="Toggle language">ES</button>
+        <a href="#about" class="ghost">About</a>
+        <a href="#values" class="ghost">Values</a>
+        <a href="#practice" class="ghost">Practice</a>
+        <a href="#team" class="ghost">Team</a>
+        <a href="#contact" class="cta">Contact</a>
       </div>
     </nav>
   </header>
@@ -114,26 +90,22 @@
   <main id="home" class="hero">
     <div class="container grid-hero">
       <div>
-        <div class="badge" role="note">⚖️ <span data-i18n="badge">Boutique law firm • Tech‑savvy • Client‑centered</span></div>
-        <h1 class="title" data-i18n="hero_title">Legal strategy that speaks human.</h1>
-        <p class="subtitle" data-i18n="hero_sub">We solve complex problems with clear language, ethics, and measurable results.</p>
-        <div class="actions" style="margin-top:18px">
-          <a href="#contact" class="cta" data-i18n="hero_cta">Book a free consult</a>
-          <a href="#about" class="ghost" data-i18n="hero_secondary">Learn more</a>
-        </div>
+        <div class="badge">⚖️ Defending Rights, Delivering Justice.</div>
+        <h1 class="title">Global Justice Inc.</h1>
+        <p class="subtitle">Global scope, human focus. We provide clear counsel and strategic representation across labor, civil, administrative and human rights matters.</p>
         <div class="stat-row" aria-label="Key metrics">
-          <div class="stat"><b>+25</b><div data-i18n="m1">projects</div></div>
-          <div class="stat"><b>5★</b><div data-i18n="m2">client rating</div></div>
-          <div class="stat"><b>24h</b><div data-i18n="m3">average response</div></div>
+          <div class="stat"><b>+25</b><div>projects</div></div>
+          <div class="stat"><b>5★</b><div>client rating</div></div>
+          <div class="stat"><b>24h</b><div>avg. response</div></div>
         </div>
       </div>
       <div class="hero-card">
-        <h3 style="margin:0 0 6px" data-i18n="hc_t">Quick links</h3>
-        <ul style="margin:0; padding-left:18px; color:#cbd5e1">
-          <li><a href="#values" data-i18n="hc_1">Our ethical compass</a></li>
-          <li><a href="#practice" data-i18n="hc_2">Practice areas</a></li>
-          <li><a href="#team" data-i18n="hc_3">Meet the team</a></li>
-          <li><a href="#contact" data-i18n="hc_4">Contact & WhatsApp</a></li>
+        <h3 style="margin:0 0 6px">Quick links</h3>
+        <ul style="margin:0; padding-left:18px; color:#e6e9f0">
+          <li><a href="#values">Our ethical compass</a></li>
+          <li><a href="#practice">Practice areas</a></li>
+          <li><a href="#team">Meet the team</a></li>
+          <li><a href="#contact">Contact & WhatsApp</a></li>
         </ul>
       </div>
     </div>
@@ -142,45 +114,46 @@
   <!-- About -->
   <section id="about">
     <div class="container">
-      <h2 data-i18n="about_h2">Who we are</h2>
-      <p class="lead" data-i18n="about_p1">LexNova is a student‑led boutique firm born at law school. We blend rigorous legal analysis with design thinking to craft practical, human‑centered solutions.</p>
-      <div class="kpis">
-        <div class="card"><b data-i18n="about_k1b">Mission</b><p data-i18n="about_k1p">Protect rights and build trust through clear counsel and strategic litigation.</p></div>
-        <div class="card"><b data-i18n="about_k2b">Vision</b><p data-i18n="about_k2p">A modern firm where accessibility, technology, and ethics lead to better justice.</p></div>
-        <div class="card"><b data-i18n="about_k3b">Method</b><p data-i18n="about_k3p">Research‑driven, client interviews, rapid memos, measurable milestones.</p></div>
-        <div class="card"><b data-i18n="about_k4b">Languages</b><p data-i18n="about_k4p">Spanish • English</p></div>
+      <h2>Who we are</h2>
+      <p class="lead">We are a student‑led boutique firm blending rigorous legal research with plain‑language writing and technology to deliver practical, ethical solutions.</p>
+      <div class="grid3">
+        <div class="card"><b>Mission</b><p class="muted">Protect rights and build trust through clear counsel and strategic litigation.</p></div>
+        <div class="card"><b>Vision</b><p class="muted">A modern firm where accessibility, technology, and ethics lead to better justice.</p></div>
+        <div class="card"><b>Languages</b><p class="muted">Spanish • English</p></div>
       </div>
     </div>
   </section>
 
   <!-- Values -->
-  <section id="values" class="values">
+  <section id="values">
     <div class="container">
-      <h2 data-i18n="values_h2">Our values</h2>
-      <p class="lead" data-i18n="values_lead">We don’t compromise on these—ever.</p>
-      <div class="grid">
-        <div class="card"><div class="icon">🤝</div><b data-i18n="v1b">Integrity</b><p data-i18n="v1p">Transparent fees, realistic expectations, and honest communication.</p></div>
-        <div class="card"><div class="icon">🧭</div><b data-i18n="v2b">Client‑first</b><p data-i18n="v2p">We listen deeply and tailor strategies to your goals and constraints.</p></div>
-        <div class="card"><div class="icon">🧠</div><b data-i18n="v3b">Excellence</b><p data-i18n="v3p">Thorough research, strong writing, and courtroom‑ready arguments.</p></div>
-        <div class="card"><div class="icon">⚖️</div><b data-i18n="v4b">Justice</b><p data-i18n="v4p">We uphold rights and dignity—especially for vulnerable communities.</p></div>
-        <div class="card"><div class="icon">🚀</div><b data-i18n="v5b">Innovation</b><p data-i18n="v5p">We use technology to simplify processes and boost access to legal help.</p></div>
-        <div class="card"><div class="icon">🌱</div><b data-i18n="v6b">Learning</b><p data-i18n="v6p">We grow with feedback, reflect on errors, and keep improving.</p></div>
+      <h2>Our values</h2>
+      <div class="grid3">
+        <div class="card"><b>Integrity</b><p class="muted">Transparent fees, realistic expectations, honest communication.</p></div>
+        <div class="card"><b>Client‑first</b><p class="muted">We listen deeply and tailor strategies to your goals and constraints.</p></div>
+        <div class="card"><b>Excellence</b><p class="muted">Thorough research, strong writing, courtroom‑ready arguments.</p></div>
+        <div class="card"><b>Justice</b><p class="muted">We uphold rights and dignity—especially for vulnerable communities.</p></div>
+        <div class="card"><b>Innovation</b><p class="muted">Technology simplifies processes and broadens access to legal help.</p></div>
+        <div class="card"><b>Learning</b><p class="muted">We reflect, improve continuously, and welcome feedback.</p></div>
       </div>
     </div>
   </section>
 
   <!-- Practice Areas -->
-  <section id="practice" class="practice">
+  <section id="practice">
     <div class="container">
-      <h2 data-i18n="practice_h2">Practice areas</h2>
-      <p class="lead" data-i18n="practice_lead">Focus where we create the most impact.</p>
-      <div class="grid">
-        <div class="card"><b data-i18n="p1b">Labor & Employment</b><p data-i18n="p1p">Contracts, wrongful termination, workplace policies, and payroll compliance.</p><span class="chip">CST</span><span class="chip">Mediation</span></div>
-        <div class="card"><b data-i18n="p2b">Administrative Law</b><p data-i18n="p2p">FOI petitions, sanctions, procurement, and public‑law remedies.</p><span class="chip">Writs</span><span class="chip">Due process</span></div>
-        <div class="card"><b data-i18n="p3b">Criminal Law (General)</b><p data-i18n="p3p">Defense theory, typicity, and procedural guarantees at early stages.</p><span class="chip">Research</span><span class="chip">Advisory</span></div>
-        <div class="card"><b data-i18n="p4b">Civil & Contracts</b><p data-i18n="p4p">Drafting, negotiation, enforceability, and dispute prevention.</p><span class="chip">Drafting</span><span class="chip">Analysis</span></div>
-        <div class="card"><b data-i18n="p5b">Compliance</b><p data-i18n="p5p">Internal policies, risk mapping, and training materials.</p><span class="chip">Policies</span><span class="chip">Audits</span></div>
-        <div class="card"><b data-i18n="p6b">Legal Writing</b><p data-i18n="p6p">Memos, briefs, and plain‑language summaries for clients and judges.</p><span class="chip">APA 7</span><span class="chip">Plain language</span></div>
+      <h2>Practice areas</h2>
+      <p class="lead">Focus where we create the most impact.</p>
+      <div class="grid3">
+        <div class="card"><b>Labor & Employment</b><p class="muted">Contracts, wrongful termination, workplace policies, payroll compliance.</p><span class="chip">Mediation</span> <span class="chip">CST</span></div>
+        <div class="card"><b>Administrative Law</b><p class="muted">FOI petitions, sanctions, procurement, public‑law remedies.</p><span class="chip">Writs</span> <span class="chip">Due process</span></div>
+        <div class="card"><b>Civil & Contracts</b><p class="muted">Drafting, negotiation, enforceability, and dispute prevention.</p><span class="chip">Drafting</span> <span class="chip">Analysis</span></div>
+      </div>
+      <div class="divider"></div>
+      <div class="grid3">
+        <div class="card"><b>Human Rights</b><p class="muted">Strategic litigation and advocacy for vulnerable populations.</p><span class="chip">Advocacy</span></div>
+        <div class="card"><b>Compliance</b><p class="muted">Internal policies, risk mapping, and training materials.</p><span class="chip">Policies</span> <span class="chip">Audits</span></div>
+        <div class="card"><b>Legal Writing</b><p class="muted">Memos, briefs, and plain‑language summaries for clients and judges.</p><span class="chip">Plain language</span></div>
       </div>
     </div>
   </section>
@@ -188,39 +161,32 @@
   <!-- Team -->
   <section id="team" class="team">
     <div class="container">
-      <h2 data-i18n="team_h2">Meet the team</h2>
-      <p class="lead" data-i18n="team_lead">Short bios that show expertise and empathy.</p>
-      <div class="grid">
+      <h2>Meet the team</h2>
+      <p class="lead">Short bios that show expertise and empathy.</p>
+      <div class="grid3">
         <div class="card" aria-label="Profile – Lead Attorney">
           <div class="avatar" aria-hidden="true">JG</div>
           <b>Jhoger Guerrero</b>
-          <div class="role" data-i18n="t1_role">Founder • Labor & Admin Law</div>
-          <p data-i18n="t1_bio">HR coordinator turned attorney. Focused on labor compliance, petitions, and accessible legal design.</p>
+          <div class="muted">Founder • Labor & Administrative Law Attorney</div>
+          <p class="muted">Labor and Administrative Law Attorney. Graduate of Universidad Católica de Colombia; Founder of Global Justice Inc.; specialist in Labor and Administrative Law with 5+ years of experience in litigation, labor proceedings, legal advisory, and training.</p>
           <div>
             <span class="chip">Spanish / English</span>
             <span class="chip">Litigation</span>
-            <span class="chip">Research</span>
+            <span class="chip">Advisory</span>
+            <span class="chip">Training</span>
           </div>
         </div>
         <div class="card" aria-label="Profile – Associate">
-          <div class="avatar" aria-hidden="true">AM</div>
-          <b>Ana Morales</b>
-          <div class="role" data-i18n="t2_role">Associate • Civil & Contracts</div>
-          <p data-i18n="t2_bio">Drafts robust agreements and simplifies negotiation with clear, fair terms.</p>
-          <div>
-            <span class="chip">Contracts</span>
-            <span class="chip">Negotiation</span>
-          </div>
+          <div class="avatar" aria-hidden="true">—</div>
+          <b>Associate</b>
+          <div class="muted">Civil & Contracts</div>
+          <p class="muted">Add your teammate here with a short bio.</p>
         </div>
         <div class="card" aria-label="Profile – Researcher">
-          <div class="avatar" aria-hidden="true">CR</div>
-          <b>Carlos Ríos</b>
-          <div class="role" data-i18n="t3_role">Researcher • Criminal Law</div>
-          <p data-i18n="t3_bio">Builds defense theory with doctrine, jurisprudence, and data‑backed insights.</p>
-          <div>
-            <span class="chip">Doctrine</span>
-            <span class="chip">Case law</span>
-          </div>
+          <div class="avatar" aria-hidden="true">—</div>
+          <b>Researcher</b>
+          <div class="muted">Criminal Law</div>
+          <p class="muted">Add your teammate here with a short bio.</p>
         </div>
       </div>
     </div>
@@ -229,12 +195,12 @@
   <!-- Contact -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2 data-i18n="contact_h2">Contact us</h2>
-      <p class="lead" data-i18n="contact_lead">Free 15‑minute consultation. We respond within one business day.</p>
-      <div class="grid">
+      <h2>Contact us</h2>
+      <p class="lead">Free 15‑minute consultation. We respond within one business day.</p>
+      <div class="grid3" style="grid-template-columns:1.1fr .9fr; gap:20px">
         <form onsubmit="sendEmail(event)">
           <div>
-            <label data-i18n="f_name">Full name</label>
+            <label>Full name</label>
             <input type="text" id="name" required placeholder="Jane Doe" />
           </div>
           <div style="margin-top:10px">
@@ -242,22 +208,24 @@
             <input type="email" id="email" required placeholder="you@example.com" />
           </div>
           <div style="margin-top:10px">
-            <label data-i18n="f_msg">Message</label>
+            <label>Message</label>
             <textarea id="message" rows="5" required placeholder="How can we help?"></textarea>
           </div>
-          <div class="actions">
-            <button class="cta" type="submit" data-i18n="f_send">Send email</button>
-            <a class="ghost" id="wa" target="_blank" rel="noopener" href="https://wa.me/573001112233" data-i18n="f_whatsapp">WhatsApp</a>
+          <div style="display:flex; gap:10px; margin-top:12px">
+            <button class="cta" type="submit">Send email</button>
+            <a class="ghost" id="wa" target="_blank" rel="noopener" href="https://wa.me/573227862315">WhatsApp</a>
           </div>
         </form>
         <div class="card">
-          <b data-i18n="c_office">Office</b>
-          <p>Bogotá D.C., Colombia</p>
-          <b data-i18n="c_hours">Hours</b>
-          <p data-i18n="c_hoursv">Mon–Fri: 8:30–18:00</p>
-          <b data-i18n="c_email">Email</b>
-          <p><a href="mailto:contact@lexnova.test">contact@lexnova.test</a></p>
-          <b data-i18n="c_social">Social</b>
+          <b>Office</b>
+          <p class="muted">Bogotá D.C., Colombia</p>
+          <b>Hours</b>
+          <p class="muted">Mon–Fri: 8:30–18:00</p>
+          <b>Email</b>
+          <p><a href="mailto:globaljustice@gmail.com">globaljustice@gmail.com</a></p>
+          <b>Phone</b>
+          <p class="muted">+57 322 786 2315</p>
+          <b>Social</b>
           <p><a href="#">LinkedIn</a> · <a href="#">GitHub Pages</a></p>
         </div>
       </div>
@@ -265,80 +233,13 @@
   </section>
 
   <footer>
-    <div class="container">
-      <div style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
-        <div>© <span id="year"></span> LexNova Attorneys — <span data-i18n="foot">Educational project template.</span></div>
-        <a href="#home" class="ghost" aria-label="Back to top">↑ Back to top</a>
-      </div>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+      <div>© <span id="year"></span> Global Justice Inc. — Educational project template.</div>
+      <a href="#home" class="ghost" aria-label="Back to top">↑ Back to top</a>
     </div>
   </footer>
 
   <script>
-    // Simple i18n dictionary (EN default, ES alt). Swap text content of [data-i18n] nodes.
-    const DICT = {
-      es: {
-        nav_about: "Quiénes somos",
-        nav_values: "Valores",
-        nav_practice: "Áreas",
-        nav_team: "Equipo",
-        nav_contact: "Contacto",
-        badge: "Firma boutique • Enfocados en tecnología • Cliente al centro",
-        hero_title: "Estrategia legal en lenguaje humano.",
-        hero_sub: "Resolvemos problemas complejos con lenguaje claro, ética y resultados medibles.",
-        hero_cta: "Agenda asesoría gratis",
-        hero_secondary: "Conócenos",
-        m1: "proyectos",
-        m2: "calificación",
-        m3: "tiempo de respuesta",
-        hc_t: "Accesos rápidos",
-        hc_1: "Nuestro compás ético",
-        hc_2: "Áreas de práctica",
-        hc_3: "Conoce al equipo",
-        hc_4: "Contacto y WhatsApp",
-        about_h2: "Quiénes somos",
-        about_p1: "LexNova es una firma estudiantil. Combinamos análisis jurídico riguroso con design thinking para crear soluciones prácticas centradas en las personas.",
-        about_k1b: "Misión", about_k1p: "Proteger derechos y construir confianza con asesoría clara y litigio estratégico.",
-        about_k2b: "Visión", about_k2p: "Una firma moderna donde accesibilidad, tecnología y ética mejoran la justicia.",
-        about_k3b: "Método", about_k3p: "Investigación, entrevistas, minutas rápidas y metas medibles.",
-        about_k4b: "Idiomas", about_k4p: "Español • Inglés",
-        values_h2: "Nuestros valores", values_lead:"Esto no se negocia—nunca.",
-        v1b:"Integridad", v1p:"Honorarios transparentes, expectativas realistas y comunicación honesta.",
-        v2b:"Cliente primero", v2p:"Escuchamos y ajustamos estrategias a tus metas y límites.",
-        v3b:"Excelencia", v3p:"Investigación sólida, buena escritura y argumentos listos para audiencia.",
-        v4b:"Justicia", v4p:"Defendemos derechos y dignidad—especialmente de poblaciones vulnerables.",
-        v5b:"Innovación", v5p:"Usamos tecnología para simplificar y ampliar el acceso a la asesoría.",
-        v6b:"Aprendizaje", v6p:"Crecemos con retroalimentación, corregimos y mejoramos continuo.",
-        practice_h2:"Áreas de práctica", practice_lead:"Enfoques donde generamos mayor impacto.",
-        p1b:"Laboral y Empleo", p1p:"Contratos, despidos, reglamentos internos y nómina.",
-        p2b:"Derecho Administrativo", p2p:"Derecho de petición, sanciones, contratación pública y recursos.",
-        p3b:"Derecho Penal (General)", p3p:"Teoría del caso, tipicidad y garantías procesales iniciales.",
-        p4b:"Civil y Contratos", p4p:"Redacción, negociación, exigibilidad y prevención de conflictos.",
-        p5b:"Compliance", p5p:"Políticas internas, mapas de riesgo y capacitación.",
-        p6b:"Redacción Jurídica", p6p:"Memorandos, demandas y lenguaje claro para clientes y jueces.",
-        team_h2:"Conoce al equipo", team_lead:"Bios breves con experticia y empatía.",
-        t1_role:"Fundador • Laboral y Administrativo", t1_bio:"De RR.HH. a abogado. Enfoque en cumplimiento laboral, peticiones y diseño legal accesible.",
-        t2_role:"Asociada • Civil y Contratos", t2_bio:"Redacta acuerdos robustos y simplifica la negociación con términos claros y justos.",
-        t3_role:"Investigador • Penal", t3_bio:"Construye teoría de defensa con doctrina, jurisprudencia y datos.",
-        contact_h2:"Contáctanos", contact_lead:"Asesoría gratuita de 15 minutos. Respondemos en un día hábil.",
-        f_name:"Nombre completo", f_msg:"Mensaje", f_send:"Enviar correo", f_whatsapp:"WhatsApp",
-        c_office:"Oficina", c_hours:"Horario", c_hoursv:"Lun–Vie: 8:30–18:00", c_email:"Correo", c_social:"Redes",
-        foot:"Plantilla de proyecto educativo."
-      }
-    };
-
-    const langBtn = document.getElementById('langBtn');
-    const nodes = Array.from(document.querySelectorAll('[data-i18n]'));
-    let ES = false;
-    langBtn.addEventListener('click', () => {
-      ES = !ES;
-      langBtn.textContent = ES ? 'EN' : 'ES';
-      langBtn.setAttribute('aria-pressed', String(ES));
-      const dict = DICT.es;
-      nodes.forEach(n => { const key = n.getAttribute('data-i18n'); if(ES && dict[key]) n.textContent = dict[key]; else n.textContent = n.dataset.orig || n.textContent; });
-    });
-    nodes.forEach(n => n.dataset.orig = n.textContent);
-
-    // Mailto helper: opens email client with prefilled subject/body.
     function sendEmail(e){
       e.preventDefault();
       const name = document.getElementById('name').value.trim();
@@ -346,10 +247,8 @@
       const msg = document.getElementById('message').value.trim();
       const subject = encodeURIComponent(`New consult — ${name}`);
       const body = encodeURIComponent(`From: ${name} <${email}>\n\n${msg}`);
-      window.location.href = `mailto:contact@lexnova.test?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:globaljustice@gmail.com?subject=${subject}&body=${body}`;
     }
-
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
