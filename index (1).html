@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Global Justice Inc. | Defending Rights, Delivering Justice.</title>
+  <meta name="description" content="Global Justice Inc. — Defending Rights, Delivering Justice.. Law firm one‑page template for coursework." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0B1D3A;     /* navy (trust/authority) */
+      --gold:#FFD700;     /* justice scales accent */
+      --white:#FFFFFF;    /* clarity/ethics */
+      --gray:#6B7280;     /* neutrality */
+      --ink:#0b1020;      /* deep ink for contrasts */
+      --panel:#0f1a33cc;  /* glassy panel */
+      --ring:#ffd70033;   /* focus ring in gold */
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:var(--white);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #153466 0%, transparent 60%),
+        radial-gradient(1000px 600px at 110% 10%, #1c2748 0%, transparent 55%),
+        var(--blue);
+    }
+    a{color:inherit; text-decoration:none}
+    .container{width:min(1100px,92%); margin-inline:auto}
+    header{position:sticky; top:0; z-index:40; backdrop-filter:saturate(140%) blur(10px);
+      background:linear-gradient(180deg, #0b1d3acc 0%, #0b1d3a00 100%); border-bottom:1px solid #ffffff22;}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+    .logo{width:44px; height:44px; display:grid; place-items:center; border-radius:12px;
+      background:conic-gradient(from 160deg, var(--gold), #eac600, var(--gold)); color:#1a1a1a; font-weight:900;
+      box-shadow:0 8px 26px #0008; border:1px solid #f1d46a; font-family:'Playfair Display', serif}
+    .navlinks{display:flex; gap:16px; align-items:center}
+    .ghost{padding:10px 14px; border-radius:999px; border:1px solid #ffffff26}
+    .cta{padding:10px 18px; border-radius:999px; background:linear-gradient(135deg, var(--gold), #e6c200);
+      color:#111; font-weight:800; box-shadow:0 10px 30px #0008}
+    /* HERO */
+    .hero{padding:90px 0 50px}
+    .grid-hero{display:grid; grid-template-columns:1.1fr .9fr; gap:40px}
+    .title{font-family:'Playfair Display', Georgia, serif; font-size:clamp(30px,6vw,56px); line-height:1.02; letter-spacing:.2px}
+    .subtitle{color:#e6e9f0; margin-top:10px}
+    .badge{display:inline-flex; align-items:center; gap:10px; padding:8px 12px; border:1px solid #ffffff22;
+      border-radius:999px; font-size:14px; background:#0b1d3a88}
+    .hero-card{background:linear-gradient(180deg, var(--panel), #0b1d3a88); border:1px solid #ffffff22; border-radius:18px; padding:18px; box-shadow:0 20px 50px #0009}
+    .stat-row{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px}
+    .stat{background:#0e1731; border:1px solid #ffffff1f; border-radius:14px; padding:14px; text-align:center}
+    .stat b{font-size:22px; color:var(--gold)}
+    /* Sections */
+    section{padding:72px 0} h2{font-family:'Playfair Display', Georgia, serif; font-size:clamp(22px,4vw,36px); margin:0 0 18px; color:#f6f7fb}
+    p.lead{color:#dbe3f6; margin:0 0 16px}
+    .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .card{background:linear-gradient(180deg, #0b1d3a99, #0b1d3a55); border:1px solid #ffffff26; border-radius:18px; padding:18px}
+    .chip{display:inline-block; padding:6px 10px; font-size:12px; border:1px solid #ffffff26; border-radius:999px; margin:4px 6px 0 0; color:#eaeaea}
+    .muted{color:#c9d2e6}
+    .team .avatar{width:64px; height:64px; border-radius:50%; background:radial-gradient(circle at 40% 30%, #ffe680, var(--gold)); display:grid; place-items:center; font-weight:800; color:#111; margin-bottom:8px; border:1px solid #f1d46a}
+    .contact .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
+    .contact form{background:#0b1d3acc; border:1px solid #ffffff26; border-radius:16px; padding:18px}
+    label{font-size:14px; color:#e6e9f0} input, textarea{width:100%; background:#0b1530; color:#fff; border:1px solid #334155; border-radius:12px; padding:12px; margin-top:6px}
+    input:focus, textarea:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
+    footer{padding:50px 0; color:#cbd3e4; border-top:1px solid #ffffff22}
+    .divider{height:1px; background:linear-gradient(90deg, transparent, #ffffff22, transparent); margin:30px 0}
+    @media (max-width: 950px){ .grid-hero, .contact .grid{grid-template-columns:1fr} .grid3{grid-template-columns:1fr 1fr} }
+    @media (max-width: 620px){ .grid3{grid-template-columns:1fr} }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="container nav" aria-label="Primary">
+      <a href="#home" class="brand" aria-label="Global Justice Inc. Home">
+        <div class="logo" aria-hidden="true">⚖️</div>
+        <span>Global Justice Inc.</span>
+      </a>
+      <div class="navlinks">
+        <a href="#about" class="ghost">About</a>
+        <a href="#values" class="ghost">Values</a>
+        <a href="#practice" class="ghost">Practice</a>
+        <a href="#team" class="ghost">Team</a>
+        <a href="#contact" class="cta">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="container grid-hero">
+      <div>
+        <div class="badge">⚖️ Defending Rights, Delivering Justice.</div>
+        <h1 class="title">Global Justice Inc.</h1>
+        <p class="subtitle">Global scope, human focus. We provide clear counsel and strategic representation across labor, civil, administrative and human rights matters.</p>
+        <div class="stat-row" aria-label="Key metrics">
+          <div class="stat"><b>+25</b><div>projects</div></div>
+          <div class="stat"><b>5★</b><div>client rating</div></div>
+          <div class="stat"><b>24h</b><div>avg. response</div></div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <h3 style="margin:0 0 6px">Quick links</h3>
+        <ul style="margin:0; padding-left:18px; color:#e6e9f0">
+          <li><a href="#values">Our ethical compass</a></li>
+          <li><a href="#practice">Practice areas</a></li>
+          <li><a href="#team">Meet the team</a></li>
+          <li><a href="#contact">Contact & WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <h2>Who we are</h2>
+      <p class="lead">We are a student‑led boutique firm blending rigorous legal research with plain‑language writing and technology to deliver practical, ethical solutions.</p>
+      <div class="grid3">
+        <div class="card"><b>Mission</b><p class="muted">Protect rights and build trust through clear counsel and strategic litigation.</p></div>
+        <div class="card"><b>Vision</b><p class="muted">A modern firm where accessibility, technology, and ethics lead to better justice.</p></div>
+        <div class="card"><b>Languages</b><p class="muted">Spanish • English</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section id="values">
+    <div class="container">
+      <h2>Our values</h2>
+      <div class="grid3">
+        <div class="card"><b>Integrity</b><p class="muted">Transparent fees, realistic expectations, honest communication.</p></div>
+        <div class="card"><b>Client‑first</b><p class="muted">We listen deeply and tailor strategies to your goals and constraints.</p></div>
+        <div class="card"><b>Excellence</b><p class="muted">Thorough research, strong writing, courtroom‑ready arguments.</p></div>
+        <div class="card"><b>Justice</b><p class="muted">We uphold rights and dignity—especially for vulnerable communities.</p></div>
+        <div class="card"><b>Innovation</b><p class="muted">Technology simplifies processes and broadens access to legal help.</p></div>
+        <div class="card"><b>Learning</b><p class="muted">We reflect, improve continuously, and welcome feedback.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Areas -->
+  <section id="practice">
+    <div class="container">
+      <h2>Practice areas</h2>
+      <p class="lead">Focus where we create the most impact.</p>
+      <div class="grid3">
+        <div class="card"><b>Labor & Employment</b><p class="muted">Contracts, wrongful termination, workplace policies, payroll compliance.</p><span class="chip">Mediation</span> <span class="chip">CST</span></div>
+        <div class="card"><b>Administrative Law</b><p class="muted">FOI petitions, sanctions, procurement, public‑law remedies.</p><span class="chip">Writs</span> <span class="chip">Due process</span></div>
+        <div class="card"><b>Civil & Contracts</b><p class="muted">Drafting, negotiation, enforceability, and dispute prevention.</p><span class="chip">Drafting</span> <span class="chip">Analysis</span></div>
+      </div>
+      <div class="divider"></div>
+      <div class="grid3">
+        <div class="card"><b>Human Rights</b><p class="muted">Strategic litigation and advocacy for vulnerable populations.</p><span class="chip">Advocacy</span></div>
+        <div class="card"><b>Compliance</b><p class="muted">Internal policies, risk mapping, and training materials.</p><span class="chip">Policies</span> <span class="chip">Audits</span></div>
+        <div class="card"><b>Legal Writing</b><p class="muted">Memos, briefs, and plain‑language summaries for clients and judges.</p><span class="chip">Plain language</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section id="team" class="team">
+    <div class="container">
+      <h2>Meet the team</h2>
+      <p class="lead">Short bios that show expertise and empathy.</p>
+      <div class="grid3">
+        <div class="card" aria-label="Profile – Lead Attorney">
+          <div class="avatar" aria-hidden="true">JG</div>
+          <b>Jhoger Guerrero</b>
+          <div class="muted">Founder • Labor & Admin Law</div>
+          <p class="muted">HR coordinator turned attorney. Focus on labor compliance, petitions, and accessible legal design.</p>
+        </div>
+        <div class="card" aria-label="Profile – Associate">
+          <div class="avatar" aria-hidden="true">AM</div>
+          <b>Ana Morales</b>
+          <div class="muted">Associate • Civil & Contracts</div>
+          <p class="muted">Drafts robust agreements and simplifies negotiation with clear, fair terms.</p>
+        </div>
+        <div class="card" aria-label="Profile – Researcher">
+          <div class="avatar" aria-hidden="true">CR</div>
+          <b>Carlos Ríos</b>
+          <div class="muted">Researcher • Criminal Law</div>
+          <p class="muted">Builds defense theory with doctrine, jurisprudence, and data‑backed insights.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact us</h2>
+      <p class="lead">Free 15‑minute consultation. We respond within one business day.</p>
+      <div class="grid3" style="grid-template-columns:1.1fr .9fr; gap:20px">
+        <form onsubmit="sendEmail(event)">
+          <div>
+            <label>Full name</label>
+            <input type="text" id="name" required placeholder="Jane Doe" />
+          </div>
+          <div style="margin-top:10px">
+            <label>Email</label>
+            <input type="email" id="email" required placeholder="you@example.com" />
+          </div>
+          <div style="margin-top:10px">
+            <label>Message</label>
+            <textarea id="message" rows="5" required placeholder="How can we help?"></textarea>
+          </div>
+          <div style="display:flex; gap:10px; margin-top:12px">
+            <button class="cta" type="submit">Send email</button>
+            <a class="ghost" id="wa" target="_blank" rel="noopener" href="https://wa.me/573001112233">WhatsApp</a>
+          </div>
+        </form>
+        <div class="card">
+          <b>Office</b>
+          <p class="muted">Bogotá D.C., Colombia</p>
+          <b>Hours</b>
+          <p class="muted">Mon–Fri: 8:30–18:00</p>
+          <b>Email</b>
+          <p><a href="mailto:contact@globaljustice.inc">contact@globaljustice.inc</a></p>
+          <b>Social</b>
+          <p><a href="#">LinkedIn</a> · <a href="#">GitHub Pages</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap">
+      <div>© <span id="year"></span> Global Justice Inc. — Educational project template.</div>
+      <a href="#home" class="ghost" aria-label="Back to top">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script>
+    function sendEmail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent(`New consult — ${name}`);
+      const body = encodeURIComponent(`From: ${name} <${email}>\n\n${msg}`);
+      window.location.href = `mailto:contact@globaljustice.inc?subject=${subject}&body=${body}`;
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
