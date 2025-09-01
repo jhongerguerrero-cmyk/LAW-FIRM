@@ -65,6 +65,9 @@
     .value{display:flex; gap:14px; align-items:flex-start}
     .icon{width:56px; height:56px; flex:0 0 56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line)}
     .icon svg{width:32px; height:32px; fill:var(--gold)}
+    /* Mission/Vision/Languages icons (elegant) */
+    .mv-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line); margin-bottom:8px}
+    .mv-icon svg{width:32px; height:32px; fill:var(--gold)}
     /* Practice icons */
     .practice-icon{width:64px; height:64px; border-radius:16px; border:1px solid var(--line); display:grid; place-items:center; background:#fff; margin-bottom:10px}
     .practice-icon svg{width:34px; height:34px; fill:var(--navy)}
@@ -153,11 +156,32 @@
   <section id="about">
     <div class="container">
       <h2>Who we are</h2>
-      <p class="lead">We are a student‑led boutique firm blending rigorous legal research with plain‑language writing and technology to deliver practical, ethical solutions.</p>
+      <p class="lead">Global Justice CO Inc. is a leading Colombian boutique law firm recognized for integrity, excellence, and client-focused strategies. We protect rights, strengthen organizations, and build trust through clear counsel and litigation expertise.</p>
       <div class="grid3">
-        <div class="card"><b>Mission</b><p class="muted">Protect rights and build trust through clear counsel and strategic litigation.</p></div>
-        <div class="card"><b>Vision</b><p class="muted">A modern firm where accessibility, technology, and ethics lead to better justice.</p></div>
-        <div class="card"><b>Languages</b><p class="muted">Spanish • English</p></div>
+        <div class="card" style="text-align:center">
+          <div class="mv-icon" aria-hidden="true">
+            <!-- Flag (Mission) -->
+            <svg viewBox="0 0 24 24"><path d="M4 3h2v18H4V3zm3 2h9l-1.5 3L16 11H7V5z"/></svg>
+          </div>
+          <b>Mission</b>
+          <p class="muted">Protect rights and build trust through clear counsel and strategic litigation.</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="mv-icon" aria-hidden="true">
+            <!-- Person climbing bar (Vision) -->
+            <svg viewBox="0 0 24 24"><path d="M9 4a2 2 0 114 0 2 2 0 01-4 0zm-1 6h3l2 2h3v2h-4l-2-2H9l-2 6H5l2-8zm10 4h2v6h-2v-6z"/></svg>
+          </div>
+          <b>Vision</b>
+          <p class="muted">Long-term impact through growth, innovation, and strategic advocacy.</p>
+        </div>
+        <div class="card" style="text-align:center">
+          <div class="mv-icon" aria-hidden="true">
+            <!-- Globe (Languages) -->
+            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-1 2.1A8 8 0 0119.9 11H11V4.1zM11 13h8.9A8 8 0 0111 19.9V13zM4.1 13H9v6.9A8 8 0 014.1 13zM9 11H4.1A8 8 0 019 4.1V11z"/></svg>
+          </div>
+          <b>Languages</b>
+          <p class="muted">Spanish • English</p>
+        </div>
       </div>
     </div>
   </section>
