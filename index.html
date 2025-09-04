@@ -65,14 +65,26 @@
     .value{display:flex; gap:14px; align-items:flex-start}
     .icon{width:56px; height:56px; flex:0 0 56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line)}
     .icon svg{width:32px; height:32px; fill:var(--gold)}
+    /* Values hover */
+    #values .card, #about .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    #values .card:hover, #about .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
+
     /* Mission/Vision/Languages icons (elegant) */
     .mv-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line); margin-bottom:8px}
     .mv-icon svg{width:32px; height:32px; fill:var(--gold)}
-    /* Practice icons */
+    /* Practice icons (ahora dorado para consistencia) */
     .practice-icon{width:64px; height:64px; border-radius:16px; border:1px solid var(--line); display:grid; place-items:center; background:#fff; margin-bottom:10px}
-    .practice-icon svg{width:34px; height:34px; fill:var(--navy)}
-    /* Team cards bigger */
-    .team-card{display:flex; flex-direction:column; gap:12px; min-height:300px; padding:28px}
+    .practice-icon svg{width:34px; height:34px; fill:var(--gold)}
+    /* Practice hover */
+    .practice .card, #practice .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    .practice .card:hover, #practice .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
+
+    /* Team cards bigger + hover */
+.practice-card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.practice-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
+
+    .team-card{display:flex; flex-direction:column; gap:12px; min-height:300px; padding:28px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    .team-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
     .avatar-photo{width:200px; height:200px; border-radius:50%; object-fit:cover; border:3px solid #a07309; display:block}
     .avatar-initials{width:140px; height:140px; border-radius:50%; display:grid; place-items:center; background:#fff; border:1px solid var(--line); color:var(--navy); font-weight:800; font-size:40px}
     .team-header{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
@@ -261,19 +273,19 @@
       <h2>Practice areas</h2>
       <p class="lead">Focus where we create the most impact.</p>
       <div class="grid3">
-        <div class="card">
+        <div class="card practice-card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M2 7h20v2H2V7zm2 4h16v8H4v-8zm3-7h10v2H7V4z"/></svg></div>
           <b>Labor & Employment</b>
           <p class="muted">Contracts, wrongful termination, workplace policies, payroll compliance.</p>
           <span class="chip">Mediation</span> <span class="chip">CST</span>
         </div>
-        <div class="card">
+        <div class="card practice-card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 3h16v4H4V3zm0 6h16v12H4V9zm4 2v8h8v-8H8z"/></svg></div>
           <b>Administrative Law</b>
           <p class="muted">FOI petitions, sanctions, procurement, public‑law remedies.</p>
           <span class="chip">Writs</span> <span class="chip">Due process</span>
         </div>
-        <div class="card">
+        <div class="card practice-card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg></div>
           <b>Civil & Contracts</b>
           <p class="muted">Drafting, negotiation, enforceability, and dispute prevention.</p>
@@ -282,19 +294,19 @@
       </div>
       <div class="divider"></div>
       <div class="grid3">
-        <div class="card">
+        <div class="card practice-card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M12 3l4 8H8l4-8zm-6 9h12l-6 9-6-9z"/></svg></div>
           <b>Human Rights</b>
           <p class="muted">Strategic litigation and advocacy for vulnerable populations.</p>
           <span class="chip">Advocacy</span>
         </div>
-        <div class="card">
+        <div class="card practice-card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M3 4h18v2H3V4zm2 4h14v12H5V8zm4 2v8h6v-8H9z"/></svg></div>
           <b>Compliance</b>
           <p class="muted">Internal policies, risk mapping, and training materials.</p>
           <span class="chip">Policies</span> <span class="chip">Audits</span>
         </div>
-        <div class="card">
+        <div class="card practice-card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M6 2h12v4H6V2zm-2 6h16v14H4V8zm4 2v10h8V10H8z"/></svg></div>
           <b>Legal Writing</b>
           <p class="muted">Memos, briefs, and plain‑language summaries for clients and judges.</p>
@@ -328,27 +340,40 @@
             <span class="chip">Training</span>
           </div>
         </div>
-        <!-- Sebastian Sanchez -->
+        <!-- Juan Sebastian Sanchez -->
         <div class="card team-card" aria-label="Profile – Co-Founder">
-          <div class="team-header">
-            <div class="avatar-initials" aria-hidden="true">SS</div>
-            <div>
-              <b>Sebastian Sanchez</b>
-              <div class="muted">Co‑Founder • Civil & Contracts Attorney</div>
+          <div class="team-header"><img src="FOTO_SEBAS_U.JPG" alt="Juan Sebastian Sanchez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+<div class="avatar-initials" style="display:none" aria-hidden="true">JS</div>
+<div>
+              <b>Juan Sebastian Sanchez</b>
+              <div class="muted">Co‑Founder • Tax Law Attorney</div>
             </div>
           </div>
-          <p class="muted">Specialist in Civil and Contract Law. Experienced in negotiation, drafting, and dispute prevention.</p>
+          <p class="muted">Lawyer and co-founder of the firm with 5 years of experience in domestic and international tax law. Advises companies and individuals on tax planning, compliance, and litigation, with expertise in transfer pricing and cross-border taxation. Holds a Master’s degree in Tax Law and delivers clear, effective solutions to complex tax challenges.</p>
         </div>
-        <!-- Alejandra Ramirez -->
+        <!-- Sofia Sierra -->
+        <div class="card team-card" aria-label="Profile – Managing Director">
+          <div class="team-header">
+            <img src="FOTO_SOFIA_U.JPG" alt="Sofia Sierra photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="avatar-initials" style="display:none" aria-hidden="true">SS</div>
+            <div>
+              <b>Sofia Sierra</b>
+              <div class="muted">Managing Director</div>
+            </div>
+          </div>
+          <p class="muted">Managing Director of Global Justice CO Inc., responsible for leading the firm’s strategy and representing it with authority and vision. Makes key decisions on clients and projects, guides the team of lawyers, and sets the course for sustainable growth. Combines legal expertise with business leadership to ensure excellence, innovation, and long‑term success.</p>
+        </div>
+        <!-- Laura Sofia Uricoechea Perez -->
         <div class="card team-card" aria-label="Profile – Attorney">
           <div class="team-header">
-            <div class="avatar-initials" aria-hidden="true">AR</div>
+            <img src="FOTO_LAURA_U.JPG" alt="Laura Sofia Uricoechea Perez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="avatar-initials" style="display:none" aria-hidden="true">LU</div>
             <div>
-              <b>Alejandra Ramirez</b>
-              <div class="muted">Attorney • Human Rights & Compliance</div>
+              <b>Laura Sofia Uricoechea Perez</b>
+              <div class="muted">Attorney • International & Constitutional Law</div>
             </div>
           </div>
-          <p class="muted">Focused on human rights defense, compliance policies, and advocacy for vulnerable communities.</p>
+          <p class="muted">Lawyer with 5 years of experience in private and public international law and constitutional law, specialized in human rights and humanitarian law. Holds a Master’s degree in Public International Law and focuses on protecting fundamental rights, advancing humanitarian principles, and high‑level advocacy before domestic and international courts.</p>
         </div>
       </div>
     </div>
@@ -378,7 +403,7 @@
             <a class="ghost" id="wa" target="_blank" rel="noopener" href="https://wa.me/573227862315">WhatsApp</a>
           </div>
         </form>
-        <div class="card">
+        <div class="card practice-card">
           <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px">
             <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10v3H7V2zm-2 5h14v15H5V7zm5 2v3h4V9H10z"/></svg></div>
             <div>
