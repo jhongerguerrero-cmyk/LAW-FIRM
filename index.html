@@ -54,7 +54,11 @@
     .value{display:flex;gap:14px;align-items:flex-start}
     .icon{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:14px;background:#fff;border:1px solid var(--line)}
     .icon svg{width:30px;height:30px;fill:var(--gold)}
-    /* TEAM — proportional fix */
+    /* About detail (Mission / Vision / Languages) */
+    .mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+    .mv{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+    .mv svg{width:28px;height:28px;fill:var(--gold);flex:0 0 28px}
+    /* TEAM — proportional */
     .team-grid{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
@@ -71,7 +75,7 @@
     label{font-size:14px;color:var(--muted)} input,textarea{width:100%;background:#fff;color:#0f172a;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:6px}
     input:focus,textarea:focus{outline:none;box-shadow:0 0 0 6px var(--ring)}
     footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
-    @media (max-width: 980px){ .grid-hero{grid-template-columns:1fr} .contact .grid{grid-template-columns:1fr} }
+    @media (max-width: 980px){ .grid-hero{grid-template-columns:1fr} .contact .grid{grid-template-columns:1fr} .mv-grid{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -133,15 +137,43 @@
     </div>
   </main>
 
-  <!-- About -->
+  <!-- Who we are (restored & expanded) -->
   <section id="about">
     <div class="container">
       <h2>Who we are</h2>
-      <p class="lead">Global Justice CO Inc. is a boutique law firm recognized for integrity, excellence, and client‑focused strategies. We protect rights, strengthen organizations, and build trust through clear counsel and litigation expertise.</p>
+      <p class="lead">
+        We are a boutique litigation & advisory practice based in Colombia. We blend rigorous legal research,
+        plain‑language writing, and technology to deliver practical, ethical results. We speak your language,
+        align with your goals, and measure outcomes.
+      </p>
+
+      <div class="mv-grid">
+        <div class="mv">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v4l3 3-1.4 1.4L11 12V7h2z"/></svg>
+          <div>
+            <b>Mission</b>
+            <p class="lead">Protect rights and strengthen organizations through clear counsel, litigation, and training.</p>
+          </div>
+        </div>
+        <div class="mv">
+          <svg viewBox="0 0 24 24"><path d="M3 20l9-16 9 16H3zm9-3l3 3H9l3-3z"/></svg>
+          <div>
+            <b>Vision</b>
+            <p class="lead">Be the trusted legal partner known for integrity, excellence, and measurable impact.</p>
+          </div>
+        </div>
+        <div class="mv">
+          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1010 10A10 10 0 0012 2zm5 10a15.8 15.8 0 01-5 9 15.8 15.8 0 01-5-9 15.8 15.8 0 015-9 15.8 15.8 0 015 9z"/></svg>
+          <div>
+            <b>Languages</b>
+            <p class="lead">English • Spanish. Clear, client‑friendly communication in both.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- Values -->
+  <!-- Values (restored) -->
   <section id="values">
     <div class="container">
       <h2>Our values</h2>
@@ -183,7 +215,7 @@
     </div>
   </section>
 
-  <!-- Team (proportional) -->
+  <!-- Team -->
   <section id="team">
     <div class="container">
       <h2>Meet the team</h2>
@@ -217,7 +249,7 @@
     </div>
   </section>
 
-  <!-- Contact (mailto + WhatsApp) -->
+  <!-- Contact -->
   <section id="contact" class="contact">
     <div class="container">
       <h2>Contact us</h2>
