@@ -45,24 +45,12 @@
     .badge{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid var(--line);
       border-radius:999px; font-size:15px; background:#fff; margin-top:4px}
     .hero-card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 8px 24px #0b102008}
-    
     /* Collage */
     .collage{display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:8px;
-      border:2px solid var(--gold); border-radius:12px; padding:8px; height:220px; background:#f8fafc}
+      border:2px solid var(--gold); border-radius:12px; padding:8px; height:260px; background:#f8fafc}
     .collage img{width:100%; height:100%; object-fit:cover; border-radius:10px; border:2px solid var(--gold);
       transition:transform .2s ease, box-shadow .2s ease}
     .collage img:hover{transform:scale(1.05); box-shadow:0 6px 18px #0000001a}
-
-    
-    /* Interaction with Courts (elegant cards) */
-    .courts{display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-top:18px}
-    .court-card{background:#fff; border:2px solid var(--gold); border-radius:14px; padding:16px; text-align:center; transition:.2s box-shadow,.2s transform}
-    .court-card:hover{box-shadow:0 8px 22px #00000014; transform:translateY(-2px)}
-    .court-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:12px; margin:0 auto 10px; background:#fff; border:1px solid var(--line)}
-    .court-icon svg{width:32px; height:32px; fill:var(--gold)}
-    .court-card b{display:block; color:var(--navy-ink)}
-    /* VIDEO placeholder */
-    .video-wrap{background:#fff; border:1px dashed #cbd5e1; border-radius:16px; padding:14px; height:220px; display:grid; place-items:center; color:#64748b}
     /* Sections */
     section{padding:64px 0} h2{font-size:clamp(22px,4vw,36px); margin:0 0 12px; color:var(--navy-ink)}
     p.lead{color:var(--muted); margin:0 0 12px}
@@ -74,37 +62,36 @@
     .value{display:flex; gap:14px; align-items:flex-start}
     .icon{width:56px; height:56px; flex:0 0 56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line)}
     .icon svg{width:32px; height:32px; fill:var(--gold)}
-    /* Values hover */
-    #values .card, #about .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
-    #values .card:hover, #about .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
-
     /* Mission/Vision/Languages icons (elegant) */
     .mv-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line); margin-bottom:8px}
     .mv-icon svg{width:32px; height:32px; fill:var(--gold)}
-    /* Practice icons (ahora dorado para consistencia) */
+    /* Practice icons */
     .practice-icon{width:64px; height:64px; border-radius:16px; border:1px solid var(--line); display:grid; place-items:center; background:#fff; margin-bottom:10px}
     .practice-icon svg{width:34px; height:34px; fill:var(--gold)}
-    /* Practice hover */
-    .practice .card, #practice .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
-    .practice .card:hover, #practice .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
-
-    /* Team cards bigger + hover */
-.practice-card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
-.practice-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
-
+    /* Hover effects */
     .team-card{display:flex; flex-direction:column; gap:12px; min-height:300px; padding:28px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
     .team-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
+    #practice .card, .practice .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    #practice .card:hover, .practice .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
+    #values .card, #about .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+    #values .card:hover, #about .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
+    .court-card{background:#fff; border:2px solid var(--gold); border-radius:14px; padding:16px; text-align:center; transition:.2s box-shadow,.2s transform}
+    .court-card:hover{box-shadow:0 8px 22px #00000014; transform:translateY(-2px)}
+    .court-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:12px; margin:0 auto 10px; background:#fff; border:1px solid var(--line)}
+    .court-icon svg{width:32px; height:32px; fill:var(--gold)}
+    /* Team */
     .avatar-photo{width:200px; height:200px; border-radius:50%; object-fit:cover; border:3px solid #a07309; display:block}
-    .avatar-initials{width:140px; height:140px; border-radius:50%; display:grid; place-items:center; background:#fff; border:1px solid var(--line); color:var(--navy); font-weight:800; font-size:40px}
+    .avatar-initials{width:200px; height:200px; border-radius:50%; display:grid; place-items:center; background:#fff; border:3px solid #a07309; color:var(--navy); font-weight:800; font-size:56px}
     .team-header{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
+    /* Contact */
     .contact .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
     .contact form{background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px}
     label{font-size:14px; color:var(--muted)} input, textarea{width:100%; background:#fff; color:var(--text); border:1px solid var(--line); border-radius:12px; padding:12px; margin-top:6px}
     input:focus, textarea:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
     footer{padding:40px 0; color:var(--muted); border-top:1px solid var(--line)}
     .divider{height:1px; background:var(--line); margin:26px 0}
-    @media (max-width: 950px){ .grid-hero, .contact .grid{grid-template-columns:1fr} .grid3{grid-template-columns:1fr 1fr} .courts{grid-template-columns:1fr} }
-    @media (max-width: 620px){ .grid3{grid-template-columns:1fr} }
+    @media (max-width: 950px){ .grid-hero, .contact .grid{grid-template-columns:1fr} .grid3{grid-template-columns:1fr 1fr} }
+    @media (max-width: 620px){ .grid3{grid-template-columns:1fr} .collage{height:220px} }
   </style>
 </head>
 <body>
@@ -160,7 +147,6 @@
         </div>
       </div>
 
-      
       <!-- Right column: TEAM collage -->
       <div class="hero-card">
         <h3 style="margin:0 0 10px; color:var(--navy-ink)">Global Justice CO Inc.</h3>
@@ -175,12 +161,11 @@
     </div>
   </main>
 
-
   <!-- About -->
   <section id="about">
     <div class="container">
       <h2>Who we are</h2>
-      <p class="lead">Global Justice CO Inc. is a leading Colombian boutique law firm recognized for integrity, excellence, and client-focused strategies. We protect rights, strengthen organizations, and build trust through clear counsel and litigation expertise.</p>
+      <p class="lead">Global Justice CO Inc. is a leading Colombian boutique law firm recognized for integrity, excellence, and client‑focused strategies. We protect rights, strengthen organizations, and build trust through clear counsel and litigation expertise.</p>
       <div class="grid3">
         <div class="card" style="text-align:center">
           <div class="mv-icon" aria-hidden="true">
@@ -285,19 +270,19 @@
       <h2>Practice areas</h2>
       <p class="lead">Focus where we create the most impact.</p>
       <div class="grid3">
-        <div class="card practice-card">
+        <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M2 7h20v2H2V7zm2 4h16v8H4v-8zm3-7h10v2H7V4z"/></svg></div>
           <b>Labor & Employment</b>
           <p class="muted">Contracts, wrongful termination, workplace policies, payroll compliance.</p>
           <span class="chip">Mediation</span> <span class="chip">CST</span>
         </div>
-        <div class="card practice-card">
+        <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 3h16v4H4V3zm0 6h16v12H4V9zm4 2v8h8v-8H8z"/></svg></div>
           <b>Administrative Law</b>
           <p class="muted">FOI petitions, sanctions, procurement, public‑law remedies.</p>
           <span class="chip">Writs</span> <span class="chip">Due process</span>
         </div>
-        <div class="card practice-card">
+        <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg></div>
           <b>Civil & Contracts</b>
           <p class="muted">Drafting, negotiation, enforceability, and dispute prevention.</p>
@@ -306,19 +291,19 @@
       </div>
       <div class="divider"></div>
       <div class="grid3">
-        <div class="card practice-card">
+        <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M12 3l4 8H8l4-8zm-6 9h12l-6 9-6-9z"/></svg></div>
           <b>Human Rights</b>
           <p class="muted">Strategic litigation and advocacy for vulnerable populations.</p>
           <span class="chip">Advocacy</span>
         </div>
-        <div class="card practice-card">
+        <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M3 4h18v2H3V4zm2 4h14v12H5V8zm4 2v8h6v-8H9z"/></svg></div>
           <b>Compliance</b>
           <p class="muted">Internal policies, risk mapping, and training materials.</p>
           <span class="chip">Policies</span> <span class="chip">Audits</span>
         </div>
-        <div class="card practice-card">
+        <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M6 2h12v4H6V2zm-2 6h16v14H4V8zm4 2v10h8V10H8z"/></svg></div>
           <b>Legal Writing</b>
           <p class="muted">Memos, briefs, and plain‑language summaries for clients and judges.</p>
@@ -354,14 +339,15 @@
         </div>
         <!-- Juan Sebastian Sanchez -->
         <div class="card team-card" aria-label="Profile – Co-Founder">
-          <div class="team-header"><img src="foto_sebas_u.jpg" alt="Juan Sebastian Sanchez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
-<div class="avatar-initials" style="display:none" aria-hidden="true">JS</div>
-<div>
+          <div class="team-header">
+            <img src="foto_sebas_u.jpg" alt="Juan Sebastian Sanchez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <div class="avatar-initials" style="display:none" aria-hidden="true">JS</div>
+            <div>
               <b>Juan Sebastian Sanchez</b>
               <div class="muted">Co‑Founder • Tax Law Attorney</div>
             </div>
           </div>
-          <p class="muted">Lawyer and co-founder of the firm with 5 years of experience in domestic and international tax law. Advises companies and individuals on tax planning, compliance, and litigation, with expertise in transfer pricing and cross-border taxation. Holds a Master’s degree in Tax Law and delivers clear, effective solutions to complex tax challenges.</p>
+          <p class="muted">Lawyer and co‑founder of the firm with 5 years of experience in domestic and international tax law. Advises companies and individuals on tax planning, compliance, and litigation, with expertise in transfer pricing and cross‑border taxation. Holds a Master’s degree in Tax Law and delivers clear, effective solutions to complex tax challenges.</p>
         </div>
         <!-- Sofia Sierra -->
         <div class="card team-card" aria-label="Profile – Managing Director">
@@ -415,7 +401,7 @@
             <a class="ghost" id="wa" target="_blank" rel="noopener" href="https://wa.me/573227862315">WhatsApp</a>
           </div>
         </form>
-        <div class="card practice-card">
+        <div class="card">
           <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px">
             <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10v3H7V2zm-2 5h14v15H5V7zm5 2v3h4V9H10z"/></svg></div>
             <div>
@@ -454,35 +440,27 @@
   </footer>
 
   <script>
-    
-function sendEmail(e){
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  const emailField = document.getElementById('email').value.trim();
-  const msg = document.getElementById('message').value.trim();
-
-  // 1) Mailto fallback (works on GitHub Pages)
-  const subject = encodeURIComponent(`New consult — ${name}`);
-  const body = encodeURIComponent(`From: ${name} <${emailField}>
-
-${msg}`);
-  window.location.href = `mailto:globaljusticeco@gmail.com?subject=${subject}&body=${body}`;
-
-  // 2) Optional: POST to a form backend (set your endpoint below)
-  const FORM_ENDPOINT = ""; // e.g., "https://formspree.io/f/xxxxxxx" or your API route
-  if (FORM_ENDPOINT){
-    fetch(FORM_ENDPOINT, {
-      method: "POST",
-      headers: {"Content-Type":"application/json"},
-      body: JSON.stringify({ name, email: emailField, message: msg })
-    }).catch(()=>{});
-  }
-
-  // Simple feedback
-  alert("Thank you! We opened an email draft with your message. We'll get back to you shortly.");
-}
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('year').textContent = new Date().getFullYear();
+    function sendEmail(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const emailField = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      // 1) Mailto fallback (works on GitHub Pages)
+      const subject = encodeURIComponent(`New consult — ${name}`);
+      const body = encodeURIComponent(`From: ${name} <${emailField}>\n\n${msg}`);
+      window.location.href = `mailto:globaljusticeco@gmail.com?subject=${subject}&body=${body}`;
+      // 2) Optional: POST to a form backend (set your endpoint below)
+      const FORM_ENDPOINT = ""; // e.g., "https://formspree.io/f/xxxxxxx"
+      if (FORM_ENDPOINT) {
+        fetch(FORM_ENDPOINT, {
+          method: "POST",
+          headers: {"Content-Type":"application/json"},
+          body: JSON.stringify({ name, email: emailField, message: msg })
+        }).catch(()=>{});
+      }
+      alert("Thank you! We opened an email draft with your message. We'll get back to you shortly.");
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
