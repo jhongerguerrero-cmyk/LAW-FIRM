@@ -10,7 +10,7 @@
       --navy:#1A365D;
       --navy-ink:#243B6B;
       --gold:#B8860B;
-      --bg:#E9ECF3;
+      --bg:#EFF2F7;
       --panel:#FFFFFF;
       --text:#0F172A;
       --muted:#475569;
@@ -21,53 +21,59 @@
     html{scroll-behavior:smooth}
     body{margin:0; font-family:"Century Gothic","Avant Garde",Arial,Helvetica,sans-serif; color:var(--text); background:var(--bg)}
     a{color:var(--navy); text-decoration:none}
-    .container{width:min(1100px,92%); margin-inline:auto}
+    .container{width:min(1160px,92%); margin-inline:auto}
     header{position:sticky; top:0; z-index:40; background:#ffffffcc; backdrop-filter:saturate(140%) blur(8px); border-bottom:1px solid var(--line)}
-    .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
     .brand{display:flex; align-items:center; gap:12px; font-weight:800; color:var(--navy)}
-    .brand-logo{width:80px; height:80px; object-fit:contain; border-radius:12px; border:1px solid var(--line); background:#fff}
-    .logo-fallback{width:80px; height:80px; display:grid; place-items:center; border-radius:12px; background:var(--gold); color:#111; font-weight:900; border:1px solid #a07309}
-    .brand-name{font-size:20px}
-    .navlinks{display:flex; gap:16px; align-items:center}
+    .brand-logo{width:72px; height:72px; object-fit:contain; border-radius:12px; border:1px solid var(--line); background:#fff}
+    .logo-fallback{width:72px; height:72px; display:grid; place-items:center; border-radius:12px; background:var(--gold); color:#111; font-weight:900; border:1px solid #a07309}
+    .brand-name{font-size:18px}
+    .navlinks{display:flex; gap:14px; align-items:center}
     .ghost{padding:10px 14px; border-radius:999px; border:1px solid var(--line); color:var(--navy)}
     .cta{padding:10px 16px; border-radius:999px; background:var(--gold); color:#111; font-weight:800; border:1px solid #a07309}
     /* HERO */
-    .hero{padding:70px 0 30px; background:linear-gradient(180deg,#fff,#eef1f6)}
-    .grid-hero{display:grid; grid-template-columns:1.1fr .9fr; gap:40px}
-    .title{font-size:clamp(34px,6vw,58px); line-height:1.06; color:var(--navy-ink); margin:0}
-    .subtitle{color:var(--muted); margin:10px 0 12px; font-size:18px}
-    .badge{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid var(--line); border-radius:999px; font-size:15px; background:#fff; margin-top:4px}
+    .hero{padding:64px 0 40px; background:linear-gradient(180deg,#fff,#eef1f6)}
+    .grid-hero{display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:start}
+    .title{font-size:clamp(36px,6vw,64px); line-height:1.06; color:var(--navy-ink); margin:0 0 6px}
+    .subtitle{color:var(--muted); margin:10px 0 16px; font-size:18px; max-width:650px}
+    .badge{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid var(--line);
+      border-radius:999px; font-size:15px; background:#fff; margin-top:6px}
     .hero-card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 8px 24px #0b102008}
-    /* Collage */
+    /* Collage smaller */
     .collage{
       display:grid;
       grid-template-columns:1fr 1fr;
-      grid-template-rows:1fr 1fr;
-      gap:8px;
+      gap:10px;
       border:2px solid var(--gold);
       border-radius:12px;
-      padding:8px;
-      height:450px; /* fixed height so all four images fit */
+      padding:10px;
       background:#f8fafc;
     }
     .collage img{
       width:100%;
-      height:100%;
-      object-fit:cover; /* keeps images inside the box */
+      height:180px;      /* smaller uniform size */
+      object-fit:cover;
       border-radius:10px;
       border:2px solid var(--gold);
       transition:transform .2s ease, box-shadow .2s ease;
     }
-    .collage img:hover{transform:scale(1.05); box-shadow:0 6px 18px #0000001a}
+    .collage img:hover{transform:scale(1.03); box-shadow:0 6px 18px #0000001a}
+    .collage-caption{margin-top:10px; font-size:13px; text-align:center; color:var(--muted)}
+    /* Courts list fix */
+    .courts{display:grid; gap:14px; margin-top:12px; max-width:560px}
+    .court-card{display:flex; justify-content:space-between; align-items:center; background:#fff; border:2px solid var(--gold); border-radius:14px; padding:14px 16px; transition:.2s box-shadow,.2s transform}
+    .court-card:hover{box-shadow:0 8px 22px #00000014; transform:translateY(-2px)}
+    .court-icon{width:44px; height:44px; display:grid; place-items:center; border-radius:10px; background:#fff; border:1px solid var(--line); margin-left:12px}
+    .court-icon svg{width:26px; height:26px; fill:var(--gold)}
     /* Sections */
-    section{padding:64px 0}
+    section{padding:58px 0}
     h2{font-size:clamp(22px,4vw,36px); margin:0 0 12px; color:var(--navy-ink)}
     p.lead{color:var(--muted); margin:0 0 12px}
     .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
     .card{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 6px 18px #0b102006}
     .chip{display:inline-block; padding:6px 10px; font-size:12px; border:1px solid var(--line); border-radius:999px; margin:4px 6px 0 0; color:var(--muted)}
     .muted{color:var(--muted)}
-    /* Icons */
+    /* Values, Practice, Team, Contact etc... (kept same as earlier version) */
     .value{display:flex; gap:14px; align-items:flex-start}
     .icon{width:56px; height:56px; flex:0 0 56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line)}
     .icon svg{width:32px; height:32px; fill:var(--gold)}
@@ -75,30 +81,16 @@
     .mv-icon svg{width:32px; height:32px; fill:var(--gold)}
     .practice-icon{width:64px; height:64px; border-radius:16px; border:1px solid var(--line); display:grid; place-items:center; background:#fff; margin-bottom:10px}
     .practice-icon svg{width:34px; height:34px; fill:var(--gold)}
-    /* Hovers */
     .team-card{display:flex; flex-direction:column; gap:12px; min-height:300px; padding:28px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
     .team-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
-    #practice .card, .practice .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
-    #practice .card:hover, .practice .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
-    #values .card, #about .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
-    #values .card:hover, #about .card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
-    .court-card{background:#fff; border:2px solid var(--gold); border-radius:14px; padding:16px; text-align:center; transition:.2s box-shadow,.2s transform}
-    .court-card:hover{box-shadow:0 8px 22px #00000014; transform:translateY(-2px)}
-    .court-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:12px; margin:0 auto 10px; background:#fff; border:1px solid var(--line)}
-    .court-icon svg{width:32px; height:32px; fill:var(--gold)}
-    /* Team avatars */
-    .avatar-photo{width:200px; height:200px; border-radius:50%; object-fit:cover; border:3px solid #a07309; display:block}
-    .avatar-initials{width:200px; height:200px; border-radius:50%; display:grid; place-items:center; background:#fff; border:3px solid #a07309; color:var(--navy); font-weight:800; font-size:56px}
-    .team-header{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
-    /* Contact */
     .contact .grid{display:grid; grid-template-columns:1.1fr .9fr; gap:20px}
     .contact form{background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px}
     label{font-size:14px; color:var(--muted)} input, textarea{width:100%; background:#fff; color:var(--text); border:1px solid var(--line); border-radius:12px; padding:12px; margin-top:6px}
     input:focus, textarea:focus{outline:none; box-shadow:0 0 0 6px var(--ring)}
     footer{padding:40px 0; color:var(--muted); border-top:1px solid var(--line)}
     .divider{height:1px; background:var(--line); margin:26px 0}
-    @media (max-width: 950px){ .grid-hero, .contact .grid{grid-template-columns:1fr} .grid3{grid-template-columns:1fr 1fr} }
-    @media (max-width: 620px){ .grid3{grid-template-columns:1fr} .collage{height:360px} }
+    @media (max-width: 1020px){ .grid-hero{grid-template-columns:1fr} .courts{max-width:none} }
+    @media (max-width: 680px){ .grid3{grid-template-columns:1fr} .collage img{height:160px} }
   </style>
 </head>
 <body>
@@ -106,7 +98,7 @@
   <header>
     <nav class="container nav" aria-label="Primary">
       <a href="#home" class="brand" aria-label="Global Justice CO Inc. Home">
-        <img src="logo.png" alt="Firm logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <img src="logo1.png" alt="Firm logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
         <div class="logo-fallback" aria-hidden="true" style="display:none">⚖️</div>
         <span class="brand-name">Global Justice CO Inc.</span>
       </a>
@@ -131,22 +123,16 @@
         <h3 style="margin:22px 0 8px; color:var(--navy-ink)">Interaction with Courts</h3>
         <div class="courts">
           <a class="court-card" href="https://www.cortesuprema.gov.co/" target="_blank" rel="noopener">
-            <div class="court-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3h2v2h3l3 6h-6l2.5-5H14v11h4v2H6v-2h4V6H8.5L11 11H5L8 5h4V3z"/></svg>
-            </div>
             <b>Supreme Court of Justice of Colombia</b>
+            <div class="court-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3h2v2h3l3 6h-6l2.5-5H14v11h4v2H6v-2h4V6H8.5L11 11H5L8 5h4V3z"/></svg></div>
           </a>
           <a class="court-card" href="https://www.corteconstitucional.gov.co/" target="_blank" rel="noopener">
-            <div class="court-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 5h9a4 4 0 014 4v10a2 2 0 01-2 2H6a3 3 0 00-3 3V5zm9 0h9v14a2 2 0 01-2 2h-7"/></svg>
-            </div>
             <b>Constitutional Court of Colombia</b>
+            <div class="court-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 5h9a4 4 0 014 4v10a2 2 0 01-2 2H6a3 3 0 00-3 3V5zm9 0h9v14a2 2 0 01-2 2h-7"/></svg></div>
           </a>
           <a class="court-card" href="https://www.consejodeestado.gov.co/" target="_blank" rel="noopener">
-            <div class="court-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6v2H3v-2zm2 3h14v7H5v-7zm3-5h8v2H8V8z"/></svg>
-            </div>
             <b>Council of State of Colombia</b>
+            <div class="court-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6v2H3v-2zm2 3h14v7H5v-7zm3-5h8v2H8V8z"/></svg></div>
           </a>
         </div>
       </div>
@@ -155,12 +141,12 @@
       <div class="hero-card">
         <h3 style="margin:0 0 10px; color:var(--navy-ink)">Global Justice CO Inc.</h3>
         <div class="collage" aria-label="Team collage preview">
-          <img src="foto_jhoger.jpg" alt="Jhoger" onerror="this.style.visibility='hidden'">
-          <img src="foto_sebas_u.jpg" alt="Sebastian" onerror="this.style.visibility='hidden'">
-          <img src="foto_sofia_u.jpg" alt="Sofia" onerror="this.style.visibility='hidden'">
-          <img src="foto_laura_u.jpg" alt="Laura" onerror="this.style.visibility='hidden'">
+          <img src="foto_jhoger.jpg" alt="Jhoger Guerrero">
+          <img src="foto_sebas_u.jpg" alt="Juan Sebastian Sanchez">
+          <img src="foto_sofia_u.jpg" alt="Sofia Sierra">
+          <img src="foto_laura_u.jpg" alt="Laura Sofia Uricoechea Perez">
         </div>
-        <div class="muted" style="margin-top:8px">Our leadership team at a glance</div>
+        <div class="collage-caption">Our leadership team at a glance</div>
       </div>
     </div>
   </main>
@@ -170,29 +156,6 @@
     <div class="container">
       <h2>Who we are</h2>
       <p class="lead">Global Justice CO Inc. is a leading Colombian boutique law firm recognized for integrity, excellence, and client‑focused strategies. We protect rights, strengthen organizations, and build trust through clear counsel and litigation expertise.</p>
-      <div class="grid3">
-        <div class="card" style="text-align:center">
-          <div class="mv-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M4 3h2v18H4V3zm3 2h9l-1.5 3L16 11H7V5z"/></svg>
-          </div>
-          <b>Mission</b>
-          <p class="muted">Protect rights and build trust through clear counsel and strategic litigation.</p>
-        </div>
-        <div class="card" style="text-align:center">
-          <div class="mv-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 4a2 2 0 114 0 2 2 0 01-4 0zm-1 6h3l2 2h3v2h-4l-2-2H9l-2 6H5l2-8zm10 4h2v6h-2v-6z"/></svg>
-          </div>
-          <b>Vision</b>
-          <p class="muted">Long-term impact through growth, innovation, and strategic advocacy.</p>
-        </div>
-        <div class="card" style="text-align:center">
-          <div class="mv-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-1 2.1A8 8 0 0119.9 11H11V4.1zM11 13h8.9A8 8 0 0111 19.9V13zM4.1 13H9v6.9A8 8 0 014.1 13zM9 11H4.1A8 8 0 019 4.1V11z"/></svg>
-          </div>
-          <b>Languages</b>
-          <p class="muted">Spanish • English</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -202,58 +165,16 @@
       <h2>Our values</h2>
       <div class="grid3">
         <div class="card value">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"/></svg>
-          </div>
-          <div>
-            <b>Integrity</b>
-            <p class="muted" style="margin:6px 0 0">Transparent fees, realistic expectations, honest communication.</p>
-          </div>
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"/></svg></div>
+          <div><b>Integrity</b><p class="muted" style="margin:6px 0 0">Transparent fees, realistic expectations, honest communication.</p></div>
         </div>
         <div class="card value">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 12l4-4 3 3 4-4 7 7-3 3-4-4-3 3-4-4-4 4z"/></svg>
-          </div>
-          <div>
-            <b>Client‑first</b>
-            <p class="muted" style="margin:6px 0 0">We listen deeply and tailor strategies to your goals and constraints.</p>
-          </div>
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 12l4-4 3 3 4-4 7 7-3 3-4-4-3 3-4-4-4 4z"/></svg></div>
+          <div><b>Client‑first</b><p class="muted" style="margin:6px 0 0">We listen deeply and tailor strategies to your goals and constraints.</p></div>
         </div>
         <div class="card value">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 2l2.5 7H22l-5.5 4 2.5 7-6-4-6 4 2.5-7L2 9h7.5z"/></svg>
-          </div>
-          <div>
-            <b>Excellence</b>
-            <p class="muted" style="margin:6px 0 0">Thorough research, strong writing, courtroom‑ready arguments.</p>
-          </div>
-        </div>
-        <div class="card value">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M12 3h2v2h3l3 6h-6l2.5-5H14v11h4v2H6v-2h4V6H8.5L11 11H5L8 5h4V3z"/></svg>
-          </div>
-          <div>
-            <b>Justice</b>
-            <p class="muted" style="margin:6px 0 0">We uphold rights and dignity—especially for vulnerable communities.</p>
-          </div>
-        </div>
-        <div class="card value">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M9 21h6v-2H9v2zm3-19a7 7 0 00-4 12.9V17h8v-2.1A7 7 0 0012 2z"/></svg>
-          </div>
-          <div>
-            <b>Innovation</b>
-            <p class="muted" style="margin:6px 0 0">Technology simplifies processes and broadens access to legal help.</p>
-          </div>
-        </div>
-        <div class="card value">
-          <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24"><path d="M3 4h13a4 4 0 014 4v10a2 2 0 01-2 2H6a3 3 0 00-3 3V4z"/></svg>
-          </div>
-          <div>
-            <b>Learning</b>
-            <p class="muted" style="margin:6px 0 0">We reflect, improve continuously, and welcome feedback.</p>
-          </div>
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 7H22l-5.5 4 2.5 7-6-4-6 4 2.5-7L2 9h7.5z"/></svg></div>
+          <div><b>Excellence</b><p class="muted" style="margin:6px 0 0">Thorough research, strong writing, courtroom‑ready arguments.</p></div>
         </div>
       </div>
     </div>
@@ -269,40 +190,16 @@
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M2 7h20v2H2V7zm2 4h16v8H4v-8zm3-7h10v2H7V4z"/></svg></div>
           <b>Labor & Employment</b>
           <p class="muted">Contracts, wrongful termination, workplace policies, payroll compliance.</p>
-          <span class="chip">Mediation</span> <span class="chip">CST</span>
         </div>
         <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 3h16v4H4V3zm0 6h16v12H4V9zm4 2v8h8v-8H8z"/></svg></div>
           <b>Administrative Law</b>
           <p class="muted">FOI petitions, sanctions, procurement, public‑law remedies.</p>
-          <span class="chip">Writs</span> <span class="chip">Due process</span>
         </div>
         <div class="card">
           <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M4 6h16v2H4V6zm0 4h16v2H4v-2zm0 4h10v2H4v-2z"/></svg></div>
           <b>Civil & Contracts</b>
           <p class="muted">Drafting, negotiation, enforceability, and dispute prevention.</p>
-          <span class="chip">Drafting</span> <span class="chip">Analysis</span>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <div class="grid3">
-        <div class="card">
-          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M12 3l4 8H8l4-8zm-6 9h12l-6 9-6-9z"/></svg></div>
-          <b>Human Rights</b>
-          <p class="muted">Strategic litigation and advocacy for vulnerable populations.</p>
-          <span class="chip">Advocacy</span>
-        </div>
-        <div class="card">
-          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M3 4h18v2H3V4zm2 4h14v12H5V8zm4 2v8h6v-8H9z"/></svg></div>
-          <b>Compliance</b>
-          <p class="muted">Internal policies, risk mapping, and training materials.</p>
-          <span class="chip">Policies</span> <span class="chip">Audits</span>
-        </div>
-        <div class="card">
-          <div class="practice-icon"><svg viewBox="0 0 24 24"><path d="M6 2h12v4H6V2zm-2 6h16v14H4V8zm4 2v10h8V10H8z"/></svg></div>
-          <b>Legal Writing</b>
-          <p class="muted">Memos, briefs, and plain‑language summaries for clients and judges.</p>
-          <span class="chip">Plain language</span>
         </div>
       </div>
     </div>
@@ -318,27 +215,15 @@
           <div class="team-header">
             <img src="foto_jhoger.jpg" alt="Jhoger Guerrero photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">JG</div>
-            <div>
-              <b>Jhoger Guerrero</b>
-              <div class="muted">Founder • Labor & Administrative Law Attorney</div>
-            </div>
+            <div><b>Jhoger Guerrero</b><div class="muted">Founder • Labor & Administrative Law Attorney</div></div>
           </div>
           <p class="muted">Labor and Administrative Law Attorney. Graduate of Universidad Católica de Colombia; Founder of Global Justice CO Inc.; specialist in Labor and Administrative Law with 5+ years of experience in litigation, labor proceedings, legal advisory, and training.</p>
-          <div>
-            <span class="chip">Spanish / English</span>
-            <span class="chip">Litigation</span>
-            <span class="chip">Advisory</span>
-            <span class="chip">Training</span>
-          </div>
         </div>
         <div class="card team-card">
           <div class="team-header">
             <img src="foto_sebas_u.jpg" alt="Juan Sebastian Sanchez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">JS</div>
-            <div>
-              <b>Juan Sebastian Sanchez</b>
-              <div class="muted">Co‑Founder • Tax Law Attorney</div>
-            </div>
+            <div><b>Juan Sebastian Sanchez</b><div class="muted">Co‑Founder • Tax Law Attorney</div></div>
           </div>
           <p class="muted">Lawyer and co‑founder of the firm with 5 years of experience in domestic and international tax law. Advises companies and individuals on tax planning, compliance, and litigation, with expertise in transfer pricing and cross‑border taxation. Holds a Master’s degree in Tax Law and delivers clear, effective solutions to complex tax challenges.</p>
         </div>
@@ -346,10 +231,7 @@
           <div class="team-header">
             <img src="foto_sofia_u.jpg" alt="Sofia Sierra photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">SS</div>
-            <div>
-              <b>Sofia Sierra</b>
-              <div class="muted">Managing Director</div>
-            </div>
+            <div><b>Sofia Sierra</b><div class="muted">Managing Director</div></div>
           </div>
           <p class="muted">Managing Director of Global Justice CO Inc., responsible for leading the firm’s strategy and representing it with authority and vision. Makes key decisions on clients and projects, guides the team of lawyers, and sets the course for sustainable growth. Combines legal expertise with business leadership to ensure excellence, innovation, and long‑term success.</p>
         </div>
@@ -357,10 +239,7 @@
           <div class="team-header">
             <img src="foto_laura_u.jpg" alt="Laura Sofia Uricoechea Perez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">LU</div>
-            <div>
-              <b>Laura Sofia Uricoechea Perez</b>
-              <div class="muted">Attorney • International & Constitutional Law</div>
-            </div>
+            <div><b>Laura Sofia Uricoechea Perez</b><div class="muted">Attorney • International & Constitutional Law</div></div>
           </div>
           <p class="muted">Lawyer with 5 years of experience in private and public international law and constitutional law, specialized in human rights and humanitarian law. Holds a Master’s degree in Public International Law and focuses on protecting fundamental rights, advancing humanitarian principles, and high‑level advocacy before domestic and international courts.</p>
         </div>
@@ -375,18 +254,9 @@
       <p class="lead">Free 15‑minute consultation. We respond within one business day.</p>
       <div class="grid3" style="grid-template-columns:1.1fr .9fr; gap:20px">
         <form onsubmit="sendEmail(event)">
-          <div>
-            <label>Full name</label>
-            <input type="text" id="name" required placeholder="Jane Doe" />
-          </div>
-          <div style="margin-top:10px">
-            <label>Email</label>
-            <input type="email" id="email" required placeholder="you@example.com" />
-          </div>
-          <div style="margin-top:10px">
-            <label>Message</label>
-            <textarea id="message" rows="5" required placeholder="How can we help?"></textarea>
-          </div>
+          <div><label>Full name</label><input type="text" id="name" required placeholder="Jane Doe" /></div>
+          <div style="margin-top:10px"><label>Email</label><input type="email" id="email" required placeholder="you@example.com" /></div>
+          <div style="margin-top:10px"><label>Message</label><textarea id="message" rows="5" required placeholder="How can we help?"></textarea></div>
           <div style="display:flex; gap:10px; margin-top:12px">
             <button class="cta" type="submit">Send email</button>
             <a class="ghost" id="wa" target="_blank" rel="noopener" href="https://wa.me/573227862315">WhatsApp</a>
@@ -395,24 +265,15 @@
         <div class="card">
           <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px">
             <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 2h10v3H7V2zm-2 5h14v15H5V7zm5 2v3h4V9H10z"/></svg></div>
-            <div>
-              <b>Office</b>
-              <p class="muted" style="margin:4px 0 0">Bogotá D.C., Colombia</p>
-            </div>
+            <div><b>Office</b><p class="muted" style="margin:4px 0 0">Bogotá D.C., Colombia</p></div>
           </div>
           <div style="display:flex; align-items:center; gap:12px; margin:10px 0">
             <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.24 11 11 0 003.4.54 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11 11 0 00.54 3.4 1 1 0 01-.24 1l-2.2 2.2z"/></svg></div>
-            <div>
-              <b>Phone / WhatsApp</b>
-              <p class="muted" style="margin:4px 0 0">+57 322 786 2315</p>
-            </div>
+            <div><b>Phone / WhatsApp</b><p class="muted" style="margin:4px 0 0">+57 322 786 2315</p></div>
           </div>
           <div style="display:flex; align-items:center; gap:12px; margin:10px 0">
             <div class="practice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm4 3h8v2H8V7zm0 4h8v2H8v-2zm0 4h6v2H8v-2z"/></svg></div>
-            <div>
-              <b>Email</b>
-              <p style="margin:4px 0 0"><a href="mailto:globaljusticeco@gmail.com">globaljusticeco@gmail.com</a></p>
-            </div>
+            <div><b>Email</b><p style="margin:4px 0 0"><a href="mailto:globaljusticeco@gmail.com">globaljusticeco@gmail.com</a></p></div>
           </div>
           <div style="display:flex; gap:10px; margin-top:12px">
             <a class="ghost" href="mailto:globaljusticeco@gmail.com">Write email</a>
@@ -439,13 +300,9 @@
       const subject = encodeURIComponent(`New consult — ${name}`);
       const body = encodeURIComponent(`From: ${name} <${emailField}>\n\n${msg}`);
       window.location.href = `mailto:globaljusticeco@gmail.com?subject=${subject}&body=${body}`;
-      const FORM_ENDPOINT = ""; // e.g., "https://formspree.io/f/xxxxxxx"
+      const FORM_ENDPOINT = ""; // Optional: "https://formspree.io/f/xxxxxxx"
       if (FORM_ENDPOINT) {
-        fetch(FORM_ENDPOINT, {
-          method: "POST",
-          headers: {"Content-Type":"application/json"},
-          body: JSON.stringify({ name, email: emailField, message: msg })
-        }).catch(()=>{});
+        fetch(FORM_ENDPOINT, {method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify({ name, email: emailField, message: msg })}).catch(()=>{});
       }
       alert("Thank you! We opened an email draft with your message. We'll get back to you shortly.");
     }
