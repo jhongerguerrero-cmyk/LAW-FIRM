@@ -9,8 +9,8 @@
     :root{
       --navy:#1A365D;
       --navy-ink:#243B6B;
-      --gold:#B8860B;        /* solid elegant gold */
-      --bg:#E9ECF3;          /* mid-light background */
+      --gold:#B8860B;
+      --bg:#E9ECF3;
       --panel:#FFFFFF;
       --text:#0F172A;
       --muted:#475569;
@@ -19,56 +19,63 @@
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: "Century Gothic","Avant Garde",Arial,Helvetica,sans-serif;
-      color:var(--text); background:var(--bg);
-    }
+    body{margin:0; font-family:"Century Gothic","Avant Garde",Arial,Helvetica,sans-serif; color:var(--text); background:var(--bg)}
     a{color:var(--navy); text-decoration:none}
     .container{width:min(1100px,92%); margin-inline:auto}
-    header{position:sticky; top:0; z-index:40; background:#ffffffcc; backdrop-filter:saturate(140%) blur(8px);
-      border-bottom:1px solid var(--line);}
+    header{position:sticky; top:0; z-index:40; background:#ffffffcc; backdrop-filter:saturate(140%) blur(8px); border-bottom:1px solid var(--line)}
     .nav{display:flex; align-items:center; justify-content:space-between; padding:14px 0}
     .brand{display:flex; align-items:center; gap:12px; font-weight:800; color:var(--navy)}
     .brand-logo{width:80px; height:80px; object-fit:contain; border-radius:12px; border:1px solid var(--line); background:#fff}
-    .logo-fallback{width:80px; height:80px; display:grid; place-items:center; border-radius:12px;
-      background:var(--gold); color:#111; font-weight:900; border:1px solid #a07309}
+    .logo-fallback{width:80px; height:80px; display:grid; place-items:center; border-radius:12px; background:var(--gold); color:#111; font-weight:900; border:1px solid #a07309}
     .brand-name{font-size:20px}
     .navlinks{display:flex; gap:16px; align-items:center}
     .ghost{padding:10px 14px; border-radius:999px; border:1px solid var(--line); color:var(--navy)}
     .cta{padding:10px 16px; border-radius:999px; background:var(--gold); color:#111; font-weight:800; border:1px solid #a07309}
     /* HERO */
-    .hero{padding:70px 0 30px; background:linear-gradient(180deg,#fff, #eef1f6)}
+    .hero{padding:70px 0 30px; background:linear-gradient(180deg,#fff,#eef1f6)}
     .grid-hero{display:grid; grid-template-columns:1.1fr .9fr; gap:40px}
     .title{font-size:clamp(34px,6vw,58px); line-height:1.06; color:var(--navy-ink); margin:0}
     .subtitle{color:var(--muted); margin:10px 0 12px; font-size:18px}
-    .badge{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid var(--line);
-      border-radius:999px; font-size:15px; background:#fff; margin-top:4px}
+    .badge{display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid var(--line); border-radius:999px; font-size:15px; background:#fff; margin-top:4px}
     .hero-card{background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:0 8px 24px #0b102008}
     /* Collage */
-    .collage{display:grid; grid-template-columns:1fr 1fr; grid-template-rows:1fr 1fr; gap:8px;
-      border:2px solid var(--gold); border-radius:12px; padding:8px; height:260px; background:#f8fafc}
-    .collage img{width:100%; height:100%; object-fit:cover; border-radius:10px; border:2px solid var(--gold);
-      transition:transform .2s ease, box-shadow .2s ease}
+    .collage{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      grid-template-rows:1fr 1fr;
+      gap:8px;
+      border:2px solid var(--gold);
+      border-radius:12px;
+      padding:8px;
+      height:450px; /* fixed height so all four images fit */
+      background:#f8fafc;
+    }
+    .collage img{
+      width:100%;
+      height:100%;
+      object-fit:cover; /* keeps images inside the box */
+      border-radius:10px;
+      border:2px solid var(--gold);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
     .collage img:hover{transform:scale(1.05); box-shadow:0 6px 18px #0000001a}
     /* Sections */
-    section{padding:64px 0} h2{font-size:clamp(22px,4vw,36px); margin:0 0 12px; color:var(--navy-ink)}
+    section{padding:64px 0}
+    h2{font-size:clamp(22px,4vw,36px); margin:0 0 12px; color:var(--navy-ink)}
     p.lead{color:var(--muted); margin:0 0 12px}
     .grid3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
     .card{background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:22px; box-shadow:0 6px 18px #0b102006}
     .chip{display:inline-block; padding:6px 10px; font-size:12px; border:1px solid var(--line); border-radius:999px; margin:4px 6px 0 0; color:var(--muted)}
     .muted{color:var(--muted)}
-    /* Values icons */
+    /* Icons */
     .value{display:flex; gap:14px; align-items:flex-start}
     .icon{width:56px; height:56px; flex:0 0 56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line)}
     .icon svg{width:32px; height:32px; fill:var(--gold)}
-    /* Mission/Vision/Languages icons (elegant) */
     .mv-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:14px; background:#fff; border:1px solid var(--line); margin-bottom:8px}
     .mv-icon svg{width:32px; height:32px; fill:var(--gold)}
-    /* Practice icons */
     .practice-icon{width:64px; height:64px; border-radius:16px; border:1px solid var(--line); display:grid; place-items:center; background:#fff; margin-bottom:10px}
     .practice-icon svg{width:34px; height:34px; fill:var(--gold)}
-    /* Hover effects */
+    /* Hovers */
     .team-card{display:flex; flex-direction:column; gap:12px; min-height:300px; padding:28px; transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
     .team-card:hover{transform:translateY(-4px); box-shadow:0 12px 28px #0000001f; border-color:#a07309}
     #practice .card, .practice .card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
@@ -79,7 +86,7 @@
     .court-card:hover{box-shadow:0 8px 22px #00000014; transform:translateY(-2px)}
     .court-icon{width:56px; height:56px; display:grid; place-items:center; border-radius:12px; margin:0 auto 10px; background:#fff; border:1px solid var(--line)}
     .court-icon svg{width:32px; height:32px; fill:var(--gold)}
-    /* Team */
+    /* Team avatars */
     .avatar-photo{width:200px; height:200px; border-radius:50%; object-fit:cover; border:3px solid #a07309; display:block}
     .avatar-initials{width:200px; height:200px; border-radius:50%; display:grid; place-items:center; background:#fff; border:3px solid #a07309; color:var(--navy); font-weight:800; font-size:56px}
     .team-header{display:flex; gap:18px; align-items:center; flex-wrap:wrap}
@@ -91,7 +98,7 @@
     footer{padding:40px 0; color:var(--muted); border-top:1px solid var(--line)}
     .divider{height:1px; background:var(--line); margin:26px 0}
     @media (max-width: 950px){ .grid-hero, .contact .grid{grid-template-columns:1fr} .grid3{grid-template-columns:1fr 1fr} }
-    @media (max-width: 620px){ .grid3{grid-template-columns:1fr} .collage{height:220px} }
+    @media (max-width: 620px){ .grid3{grid-template-columns:1fr} .collage{height:360px} }
   </style>
 </head>
 <body>
@@ -125,21 +132,18 @@
         <div class="courts">
           <a class="court-card" href="https://www.cortesuprema.gov.co/" target="_blank" rel="noopener">
             <div class="court-icon" aria-hidden="true">
-              <!-- Scales -->
               <svg viewBox="0 0 24 24"><path d="M12 3h2v2h3l3 6h-6l2.5-5H14v11h4v2H6v-2h4V6H8.5L11 11H5L8 5h4V3z"/></svg>
             </div>
             <b>Supreme Court of Justice of Colombia</b>
           </a>
           <a class="court-card" href="https://www.corteconstitucional.gov.co/" target="_blank" rel="noopener">
             <div class="court-icon" aria-hidden="true">
-              <!-- Open Book -->
               <svg viewBox="0 0 24 24"><path d="M3 5h9a4 4 0 014 4v10a2 2 0 01-2 2H6a3 3 0 00-3 3V5zm9 0h9v14a2 2 0 01-2 2h-7"/></svg>
             </div>
             <b>Constitutional Court of Colombia</b>
           </a>
           <a class="court-card" href="https://www.consejodeestado.gov.co/" target="_blank" rel="noopener">
             <div class="court-icon" aria-hidden="true">
-              <!-- Court Building -->
               <svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6v2H3v-2zm2 3h14v7H5v-7zm3-5h8v2H8V8z"/></svg>
             </div>
             <b>Council of State of Colombia</b>
@@ -151,7 +155,7 @@
       <div class="hero-card">
         <h3 style="margin:0 0 10px; color:var(--navy-ink)">Global Justice CO Inc.</h3>
         <div class="collage" aria-label="Team collage preview">
-          <img src="jhoger.png" alt="Jhoger" onerror="this.style.visibility='hidden'">
+          <img src="foto_jhoger.jpg" alt="Jhoger" onerror="this.style.visibility='hidden'">
           <img src="foto_sebas_u.jpg" alt="Sebastian" onerror="this.style.visibility='hidden'">
           <img src="foto_sofia_u.jpg" alt="Sofia" onerror="this.style.visibility='hidden'">
           <img src="foto_laura_u.jpg" alt="Laura" onerror="this.style.visibility='hidden'">
@@ -169,7 +173,6 @@
       <div class="grid3">
         <div class="card" style="text-align:center">
           <div class="mv-icon" aria-hidden="true">
-            <!-- Flag (Mission) -->
             <svg viewBox="0 0 24 24"><path d="M4 3h2v18H4V3zm3 2h9l-1.5 3L16 11H7V5z"/></svg>
           </div>
           <b>Mission</b>
@@ -177,7 +180,6 @@
         </div>
         <div class="card" style="text-align:center">
           <div class="mv-icon" aria-hidden="true">
-            <!-- Person climbing bar (Vision) -->
             <svg viewBox="0 0 24 24"><path d="M9 4a2 2 0 114 0 2 2 0 01-4 0zm-1 6h3l2 2h3v2h-4l-2-2H9l-2 6H5l2-8zm10 4h2v6h-2v-6z"/></svg>
           </div>
           <b>Vision</b>
@@ -185,7 +187,6 @@
         </div>
         <div class="card" style="text-align:center">
           <div class="mv-icon" aria-hidden="true">
-            <!-- Globe (Languages) -->
             <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-1 2.1A8 8 0 0119.9 11H11V4.1zM11 13h8.9A8 8 0 0111 19.9V13zM4.1 13H9v6.9A8 8 0 014.1 13zM9 11H4.1A8 8 0 019 4.1V11z"/></svg>
           </div>
           <b>Languages</b>
@@ -202,7 +203,6 @@
       <div class="grid3">
         <div class="card value">
           <div class="icon" aria-hidden="true">
-            <!-- Shield icon for Integrity -->
             <svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"/></svg>
           </div>
           <div>
@@ -212,7 +212,6 @@
         </div>
         <div class="card value">
           <div class="icon" aria-hidden="true">
-            <!-- Handshake icon for Client-first -->
             <svg viewBox="0 0 24 24"><path d="M3 12l4-4 3 3 4-4 7 7-3 3-4-4-3 3-4-4-4 4z"/></svg>
           </div>
           <div>
@@ -222,7 +221,6 @@
         </div>
         <div class="card value">
           <div class="icon" aria-hidden="true">
-            <!-- Medal/Star for Excellence -->
             <svg viewBox="0 0 24 24"><path d="M12 2l2.5 7H22l-5.5 4 2.5 7-6-4-6 4 2.5-7L2 9h7.5z"/></svg>
           </div>
           <div>
@@ -232,7 +230,6 @@
         </div>
         <div class="card value">
           <div class="icon" aria-hidden="true">
-            <!-- Scales of justice -->
             <svg viewBox="0 0 24 24"><path d="M12 3h2v2h3l3 6h-6l2.5-5H14v11h4v2H6v-2h4V6H8.5L11 11H5L8 5h4V3z"/></svg>
           </div>
           <div>
@@ -242,7 +239,6 @@
         </div>
         <div class="card value">
           <div class="icon" aria-hidden="true">
-            <!-- Lightbulb for Innovation -->
             <svg viewBox="0 0 24 24"><path d="M9 21h6v-2H9v2zm3-19a7 7 0 00-4 12.9V17h8v-2.1A7 7 0 0012 2z"/></svg>
           </div>
           <div>
@@ -252,7 +248,6 @@
         </div>
         <div class="card value">
           <div class="icon" aria-hidden="true">
-            <!-- Book for Learning -->
             <svg viewBox="0 0 24 24"><path d="M3 4h13a4 4 0 014 4v10a2 2 0 01-2 2H6a3 3 0 00-3 3V4z"/></svg>
           </div>
           <div>
@@ -264,7 +259,7 @@
     </div>
   </section>
 
-  <!-- Practice Areas -->
+  <!-- Practice -->
   <section id="practice">
     <div class="container">
       <h2>Practice areas</h2>
@@ -319,10 +314,9 @@
       <h2>Meet the team</h2>
       <p class="lead">Short bios that show expertise and empathy.</p>
       <div class="grid3">
-        <!-- Jhoger -->
-        <div class="card team-card" aria-label="Profile – Lead Attorney">
+        <div class="card team-card">
           <div class="team-header">
-            <img src="jhoger.png" alt="Jhoger Guerrero photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
+            <img src="foto_jhoger.jpg" alt="Jhoger Guerrero photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">JG</div>
             <div>
               <b>Jhoger Guerrero</b>
@@ -337,8 +331,7 @@
             <span class="chip">Training</span>
           </div>
         </div>
-        <!-- Juan Sebastian Sanchez -->
-        <div class="card team-card" aria-label="Profile – Co-Founder">
+        <div class="card team-card">
           <div class="team-header">
             <img src="foto_sebas_u.jpg" alt="Juan Sebastian Sanchez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">JS</div>
@@ -349,8 +342,7 @@
           </div>
           <p class="muted">Lawyer and co‑founder of the firm with 5 years of experience in domestic and international tax law. Advises companies and individuals on tax planning, compliance, and litigation, with expertise in transfer pricing and cross‑border taxation. Holds a Master’s degree in Tax Law and delivers clear, effective solutions to complex tax challenges.</p>
         </div>
-        <!-- Sofia Sierra -->
-        <div class="card team-card" aria-label="Profile – Managing Director">
+        <div class="card team-card">
           <div class="team-header">
             <img src="foto_sofia_u.jpg" alt="Sofia Sierra photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">SS</div>
@@ -361,8 +353,7 @@
           </div>
           <p class="muted">Managing Director of Global Justice CO Inc., responsible for leading the firm’s strategy and representing it with authority and vision. Makes key decisions on clients and projects, guides the team of lawyers, and sets the course for sustainable growth. Combines legal expertise with business leadership to ensure excellence, innovation, and long‑term success.</p>
         </div>
-        <!-- Laura Sofia Uricoechea Perez -->
-        <div class="card team-card" aria-label="Profile – Attorney">
+        <div class="card team-card">
           <div class="team-header">
             <img src="foto_laura_u.jpg" alt="Laura Sofia Uricoechea Perez photo" class="avatar-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';" />
             <div class="avatar-initials" style="display:none" aria-hidden="true">LU</div>
@@ -445,11 +436,9 @@
       const name = document.getElementById('name').value.trim();
       const emailField = document.getElementById('email').value.trim();
       const msg = document.getElementById('message').value.trim();
-      // 1) Mailto fallback (works on GitHub Pages)
       const subject = encodeURIComponent(`New consult — ${name}`);
       const body = encodeURIComponent(`From: ${name} <${emailField}>\n\n${msg}`);
       window.location.href = `mailto:globaljusticeco@gmail.com?subject=${subject}&body=${body}`;
-      // 2) Optional: POST to a form backend (set your endpoint below)
       const FORM_ENDPOINT = ""; // e.g., "https://formspree.io/f/xxxxxxx"
       if (FORM_ENDPOINT) {
         fetch(FORM_ENDPOINT, {
