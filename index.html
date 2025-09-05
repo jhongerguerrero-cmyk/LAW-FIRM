@@ -11,6 +11,7 @@
       --navy:#1A365D;
       --ink:#243B6B;
       --gold:#B8860B;
+      --gold-ghost:#b8860b18;
       --bg:#EFF2F7;
       --panel:#FFFFFF;
       --muted:#475569;
@@ -21,7 +22,6 @@
     body{margin:0;font-family:"Century Gothic","Avant Garde",Arial,Helvetica,sans-serif;background:var(--bg);color:#0f172a}
     a{color:var(--ink);text-decoration:none}
     .container{width:min(1160px,92%);margin-inline:auto}
-    /* Header */
     header{position:sticky;top:0;z-index:10;background:#ffffffcc;backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--ink)}
@@ -29,53 +29,47 @@
     .navlinks{display:flex;gap:10px;align-items:center}
     .ghost{padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:#fff}
     .cta{padding:9px 16px;border-radius:999px;background:var(--gold);color:#111;border:1px solid #a07309;font-weight:800}
-    /* Hero */
     .hero{padding:64px 0 36px;background:linear-gradient(180deg,#fff,#eef1f6)}
     .grid-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
     h1.title{font-size:clamp(36px,6vw,60px);line-height:1.06;color:var(--ink);margin:0 0 6px}
     .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;margin:6px 0 12px}
     p.lead{color:var(--muted);margin:0 0 12px}
     .hero-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px #0b102008}
-    /* Collage (hero right) */
     .collage{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:2px solid var(--gold);border-radius:12px;padding:10px;background:#f8fafc}
     .collage img{width:100%;height:170px;object-fit:cover;border-radius:10px;border:2px solid var(--gold)}
     .collage-caption{margin-top:8px;font-size:13px;text-align:center;color:var(--muted)}
-    /* Courts list */
-    .courts{display:grid;gap:12px;margin-top:10px;max-width:560px}
+    .hrow{display:flex;align-items:center;gap:10px;color:var(--ink);margin:18px 0 8px}
+    .hrow svg{width:24px;height:24px;fill:var(--gold)}
+    h2{font-size:clamp(22px,4vw,34px);margin:0;color:var(--ink)}
+    h3{font-size:clamp(18px,3vw,22px);margin:0;color:var(--ink)}
+    .courts{display:grid;gap:12px;margin-top:10px;max-width:620px}
     .court-card{display:flex;justify-content:space-between;align-items:center;background:#fff;border:2px solid var(--gold);border-radius:14px;padding:12px 14px;transition:.2s box-shadow,.2s transform}
     .court-card:hover{box-shadow:0 8px 22px #00000014;transform:translateY(-2px)}
     .court-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:10px;background:#fff;border:1px solid var(--line);margin-left:10px}
     .court-icon svg{width:24px;height:24px;fill:var(--gold)}
-    /* Sections */
     section{padding:54px 0}
-    h2{font-size:clamp(22px,4vw,34px);margin:0 0 10px;color:var(--ink)}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 6px 18px #0b102006}
     .value{display:flex;gap:14px;align-items:flex-start}
-    .icon{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:14px;background:#fff;border:1px solid var(--line)}
+    .icon{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:14px;background:var(--gold-ghost);border:1px solid var(--gold)}
     .icon svg{width:30px;height:30px;fill:var(--gold)}
-    /* About detail (Mission / Vision / Languages) */
     .mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
     .mv{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
     .mv svg{width:28px;height:28px;fill:var(--gold);flex:0 0 28px}
-    /* TEAM — proportional */
-    .team-grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-      gap:20px;
-      align-items:start;
-    }
+    .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;align-items:start}
     .team-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;box-shadow:0 6px 18px #0b102006;transition:transform .2s ease, box-shadow .2s ease}
     .team-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #00000018}
     .team-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);display:block;margin:6px auto 12px}
     .role{color:var(--muted);font-size:14px;margin-top:4px}
-    /* Contact */
     .contact .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}
     .contact form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
     label{font-size:14px;color:var(--muted)} input,textarea{width:100%;background:#fff;color:#0f172a;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:6px}
     input:focus,textarea:focus{outline:none;box-shadow:0 0 0 6px var(--ring)}
+    .contact-info{display:grid;gap:12px}
+    .info-row{display:flex;align-items:center;gap:12px;padding:10px;border:1px dashed var(--gold);border-radius:12px;background:#fff}
+    .info-row svg{width:22px;height:22px;fill:var(--gold)}
     footer{padding:34px 0;border-top:1px solid var(--line);color:var(--muted)}
-    @media (max-width: 980px){ .grid-hero{grid-template-columns:1fr} .contact .grid{grid-template-columns:1fr} .mv-grid{grid-template-columns:1fr} }
+    @media (max-width: 980px){ .grid-hero{grid-template-columns:1fr} .contact .grid{grid-template-columns:1fr} .mv-grid{grid-template-columns:1fr} .grid3{grid-template-columns:1fr} }
   </style>
 </head>
 <body>
@@ -100,13 +94,16 @@
       <!-- Left -->
       <div>
         <h1 class="title">Global Justice CO Inc.</h1>
-        <div class="badge">Defending Rights, Delivering Justice.</div>
+        <div class="badge">
+          <svg viewBox="0 0 24 24" width="18" height="18" style="fill:var(--gold)"><path d="M12 2l2 4 4 .6-3 3 .7 4L12 12l-3.7 1.6.7-4-3-3 4-.6 2-4z"/></svg>
+          Defending Rights, Delivering Justice.
+        </div>
         <p class="lead">
           We are a leading Colombian law firm with more than 5 years providing security, honesty, and truth.
           We help improve corporate processes, protect your rights, and provide knowledge and training.
         </p>
 
-        <h3 style="margin:18px 0 8px;color:var(--ink)">Interaction with Courts</h3>
+        <div class="hrow"><svg viewBox="0 0 24 24"><path d="M12 2l9 5v3H3V7l9-5zm9 8v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-8h18z"/></svg><h3>Legal interaction</h3></div>
         <div class="courts">
           <a class="court-card" target="_blank" rel="noopener" href="https://www.cortesuprema.gov.co/">
             <b>Supreme Court of Justice of Colombia</b>
@@ -120,12 +117,20 @@
             <b>Council of State of Colombia</b>
             <div class="court-icon"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6v2H3v-2zm2 3h14v7H5v-7zm3-5h8v2H8V8z"/></svg></div>
           </a>
+          <a class="court-card" target="_blank" rel="noopener" href="https://www.mintrabajo.gov.co/">
+            <b>Ministry of Labor of Colombia</b>
+            <div class="court-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm2 6h12l2 10H4l2-10zm4-6h4v2h-4V4z"/></svg></div>
+          </a>
+          <a class="court-card" target="_blank" rel="noopener" href="https://www.minjusticia.gov.co/">
+            <b>Ministry of Justice of Colombia</b>
+            <div class="court-icon"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6a8 8 0 11-14 0V6l7-4zm0 8a3 3 0 100 6 3 3 0 000-6z"/></svg></div>
+          </a>
         </div>
       </div>
 
       <!-- Right: collage -->
       <div class="hero-card">
-        <h3 style="margin:0 0 10px;color:var(--ink)">Global Justice CO Inc.</h3>
+        <div class="hrow"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 7H22l-5.5 4L19 20l-7-4-7 4 2.5-7L2 9h7.5z"/></svg><h3>Global Justice CO Inc.</h3></div>
         <div class="collage" aria-label="Team collage">
           <img src="foto_jhoger.jpg" alt="Jhoger Guerrero">
           <img src="foto_sebas_u.jpg" alt="Juan Sebastian Sanchez">
@@ -137,10 +142,10 @@
     </div>
   </main>
 
-  <!-- Who we are (restored & expanded) -->
+  <!-- Who we are -->
   <section id="about">
     <div class="container">
-      <h2>Who we are</h2>
+      <div class="hrow"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v4l3 3-1.4 1.4L11 12V7h2z"/></svg><h2>Who we are</h2></div>
       <p class="lead">
         We are a boutique litigation & advisory practice based in Colombia. We blend rigorous legal research,
         plain‑language writing, and technology to deliver practical, ethical results. We speak your language,
@@ -149,14 +154,14 @@
 
       <div class="mv-grid">
         <div class="mv">
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v4l3 3-1.4 1.4L11 12V7h2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M5 3h14v4H5zM4 9h16v12H4z"/></svg>
           <div>
             <b>Mission</b>
             <p class="lead">Protect rights and strengthen organizations through clear counsel, litigation, and training.</p>
           </div>
         </div>
         <div class="mv">
-          <svg viewBox="0 0 24 24"><path d="M3 20l9-16 9 16H3zm9-3l3 3H9l3-3z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l9 16H3L12 2zm0 6l-4 7h8l-4-7z"/></svg>
           <div>
             <b>Vision</b>
             <p class="lead">Be the trusted legal partner known for integrity, excellence, and measurable impact.</p>
@@ -173,10 +178,10 @@
     </div>
   </section>
 
-  <!-- Values (restored) -->
+  <!-- Values (6) -->
   <section id="values">
     <div class="container">
-      <h2>Our values</h2>
+      <div class="hrow"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"/></svg><h2>Our values</h2></div>
       <div class="grid3">
         <div class="card value">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"/></svg></div>
@@ -190,26 +195,50 @@
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 7H22l-5.5 4 2.5 7-6-4-6 4 2.5-7L2 9h7.5z"/></svg></div>
           <div><b>Excellence</b><p class="lead" style="margin:6px 0 0">Thorough research, strong writing, courtroom‑ready arguments.</p></div>
         </div>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M9 21h6v-2H9v2zm3-19a7 7 0 00-4 12.9V17h8v-2.1A7 7 0 0012 2z"/></svg></div>
+          <div><b>Innovation</b><p class="lead" style="margin:6px 0 0">Smart use of technology to improve speed, quality, and access.</p></div>
+        </div>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 3h2v2h3l3 6h-6l2.5-5H14v11h4v2H6v-2h4V6H8.5L11 11H5L8 5h4V3z"/></svg></div>
+          <div><b>Justice & Equality</b><p class="lead" style="margin:6px 0 0">Upholding rights and dignity, with special focus on vulnerable groups.</p></div>
+        </div>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 110-10 5 5 0 010 10zm-9 9a9 9 0 0118 0H3z"/></svg></div>
+          <div><b>Collaboration</b><p class="lead" style="margin:6px 0 0">We team up with clients and partners to co‑create solutions.</p></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Practice -->
+  <!-- Practice areas -->
   <section id="practice">
     <div class="container">
-      <h2>Practice areas</h2>
+      <div class="hrow"><svg viewBox="0 0 24 24"><path d="M4 4h16v4H4V4zm0 6h16v4H4v-4zm0 6h16v4H4v-4z"/></svg><h2>Practice areas</h2></div>
       <div class="grid3">
-        <div class="card">
-          <b>Labor & Employment</b>
-          <p class="lead">Contracts, wrongful termination, workplace policies, payroll compliance.</p>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M6 2h12v6H6zM4 10h16v10H4z"/></svg></div>
+          <div><b>Labor & Employment</b><p class="lead">Contracts, wrongful termination, workplace policies, payroll compliance.</p></div>
         </div>
-        <div class="card">
-          <b>Administrative Law</b>
-          <p class="lead">FOI petitions, sanctions, procurement, public‑law remedies.</p>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 6l9-4 9 4v12l-9 4-9-4V6z"/></svg></div>
+          <div><b>Administrative Law</b><p class="lead">FOI petitions, sanctions, procurement, public‑law remedies.</p></div>
         </div>
-        <div class="card">
-          <b>Civil & Contracts</b>
-          <p class="lead">Drafting, negotiation, enforceability, and dispute prevention.</p>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zM7 9h10v6H7z"/></svg></div>
+          <div><b>Civil & Contracts</b><p class="lead">Drafting, negotiation, enforceability, and dispute prevention.</p></div>
+        </div>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 5v4l3 3-1.4 1.4L11 12V7h2z"/></svg></div>
+          <div><b>Tax Law</b><p class="lead">Planning, compliance, litigation, transfer pricing, cross‑border taxation.</p></div>
+        </div>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M5 3h14l1 6H4l1-6zm-1 8h16v8H4v-8z"/></svg></div>
+          <div><b>Constitutional</b><p class="lead">Rights protection, tutela actions, constitutional litigation.</p></div>
+        </div>
+        <div class="card value">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg></div>
+          <div><b>International & Human Rights</b><p class="lead">Public/private international law and humanitarian rights.</p></div>
         </div>
       </div>
     </div>
@@ -218,7 +247,7 @@
   <!-- Team -->
   <section id="team">
     <div class="container">
-      <h2>Meet the team</h2>
+      <div class="hrow"><svg viewBox="0 0 24 24"><path d="M12 12a5 5 0 110-10 5 5 0 010 10zm-9 9a9 9 0 0118 0H3z"/></svg><h2>Meet the team</h2></div>
       <p class="lead">Short bios that show expertise and empathy.</p>
       <div class="team-grid">
         <div class="team-card">
@@ -249,29 +278,34 @@
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact with automatic email submit -->
   <section id="contact" class="contact">
     <div class="container">
-      <h2>Contact us</h2>
+      <div class="hrow"><svg viewBox="0 0 24 24"><path d="M21 8V7l-3 2-4-4 2-3h-1L9 7l8 8 4-4zM3 6h6v2H3V6zm0 4h6v2H3v-2zm0 4h10v2H3v-2z"/></svg><h2>Contact us</h2></div>
       <p class="lead">Free 15‑minute consultation. We respond within one business day.</p>
       <div class="grid">
-        <form onsubmit="sendEmail(event)">
-          <div><label>Full name</label><input id="name" required placeholder="Jane Doe" /></div>
-          <div style="margin-top:10px"><label>Email</label><input type="email" id="email" required placeholder="you@example.com" /></div>
-          <div style="margin-top:10px"><label>Message</label><textarea id="message" rows="5" required placeholder="How can we help?"></textarea></div>
+        <!-- Using formsubmit.co: sends directly to your email without backend -->
+        <form action="https://formsubmit.co/globaljusticeco@gmail.com" method="POST">
+          <!-- Disable CAPTCHA for smoother UX -->
+          <input type="hidden" name="_captcha" value="false">
+          <!-- Subject line -->
+          <input type="hidden" name="_subject" value="New consult — Global Justice CO Inc.">
+          <!-- Thank-you redirect (optional) -->
+          <input type="hidden" name="_next" value="https://github.com/">
+          <div><label>Full name</label><input name="name" required placeholder="Jane Doe" /></div>
+          <div style="margin-top:10px"><label>Email</label><input type="email" name="email" required placeholder="you@example.com" /></div>
+          <div style="margin-top:10px"><label>Message</label><textarea name="message" rows="5" required placeholder="How can we help?"></textarea></div>
           <div style="display:flex;gap:10px;margin-top:12px">
             <button class="cta" type="submit">Send email</button>
             <a class="ghost" target="_blank" rel="noopener" href="https://wa.me/573227862315">WhatsApp</a>
           </div>
         </form>
-        <div class="card">
-          <b>Office</b>
-          <p class="lead">Bogotá D.C., Colombia</p>
-          <div class="divider" style="height:1px;background:var(--line);margin:14px 0"></div>
-          <b>Phone / WhatsApp</b>
-          <p class="lead">+57 322 786 2315</p>
-          <b>Email</b>
-          <p><a href="mailto:globaljusticeco@gmail.com">globaljusticeco@gmail.com</a></p>
+        <div class="card contact-info">
+          <div class="hrow"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-4-3-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg><h3>Our office</h3></div>
+          <div class="info-row"><svg viewBox="0 0 24 24"><path d="M12 2C8 2 5 5 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-4-3-7-7-7z"/></svg> Bogotá D.C., Colombia</div>
+          <div class="info-row"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011 .2l3.3 2.2a1 1 0 01.4 1v3.2a1 1 0 01-1 1A18 18 0 013 6a1 1 0 011-1h3.2a1 1 0 011 .4l2.2 3.3a1 1 0 01.2 1l-2.2 2.1z"/></svg> +57 322 786 2315</div>
+          <div class="info-row"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4V4zm2 3l6 5 6-5"/></svg> <a href="mailto:globaljusticeco@gmail.com">globaljusticeco@gmail.com</a></div>
+          <div class="info-row"><svg viewBox="0 0 24 24"><path d="M4 4h16v10H4zM2 18h20v2H2z"/></svg> Mon–Fri · 9:00–17:00</div>
         </div>
       </div>
     </div>
@@ -285,16 +319,6 @@
   </footer>
 
   <script>
-    function sendEmail(e){
-      e.preventDefault();
-      const name=document.getElementById('name').value.trim();
-      const email=document.getElementById('email').value.trim();
-      const msg=document.getElementById('message').value.trim();
-      const subject=encodeURIComponent('New consult — '+name);
-      const body=encodeURIComponent('From: '+name+' <'+email+'>\\n\\n'+msg);
-      window.location.href='mailto:globaljusticeco@gmail.com?subject='+subject+'&body='+body;
-      alert("We opened your email app with a prefilled message. Thanks!");
-    }
     document.getElementById('year').textContent=new Date().getFullYear();
   </script>
 </body>
