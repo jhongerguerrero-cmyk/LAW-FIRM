@@ -10,8 +10,8 @@
     :root{
       --navy:#1A365D;
       --ink:#243B6B;
-      --gold:#B8860B;
-      --gold-ghost:#b8860b18;
+      --gold:#B8860B;           /* solid, elegant gold */
+      --gold-ghost:#b8860b18;   /* subtle background */
       --bg:#EFF2F7;
       --panel:#FFFFFF;
       --muted:#475569;
@@ -22,6 +22,7 @@
     body{margin:0;font-family:"Century Gothic","Avant Garde",Arial,Helvetica,sans-serif;background:var(--bg);color:#0f172a}
     a{color:var(--ink);text-decoration:none}
     .container{width:min(1160px,92%);margin-inline:auto}
+    /* Header */
     header{position:sticky;top:0;z-index:10;background:#ffffffcc;backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
     .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
     .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--ink)}
@@ -29,38 +30,46 @@
     .navlinks{display:flex;gap:10px;align-items:center}
     .ghost{padding:8px 14px;border-radius:999px;border:1px solid var(--line);color:var(--ink);background:#fff}
     .cta{padding:9px 16px;border-radius:999px;background:var(--gold);color:#111;border:1px solid #a07309;font-weight:800}
+    /* Hero */
     .hero{padding:64px 0 36px;background:linear-gradient(180deg,#fff,#eef1f6)}
     .grid-hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
     h1.title{font-size:clamp(36px,6vw,60px);line-height:1.06;color:var(--ink);margin:0 0 6px}
     .badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:14px;margin:6px 0 12px}
     p.lead{color:var(--muted);margin:0 0 12px}
     .hero-card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 8px 24px #0b102008}
+    /* Collage (hero right) */
     .collage{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:2px solid var(--gold);border-radius:12px;padding:10px;background:#f8fafc}
     .collage img{width:100%;height:170px;object-fit:cover;border-radius:10px;border:2px solid var(--gold)}
     .collage-caption{margin-top:8px;font-size:13px;text-align:center;color:var(--muted)}
+    /* Heading with icon */
     .hrow{display:flex;align-items:center;gap:10px;color:var(--ink);margin:18px 0 8px}
     .hrow svg{width:24px;height:24px;fill:var(--gold)}
     h2{font-size:clamp(22px,4vw,34px);margin:0;color:var(--ink)}
     h3{font-size:clamp(18px,3vw,22px);margin:0;color:var(--ink)}
+    /* Legal interaction list */
     .courts{display:grid;gap:12px;margin-top:10px;max-width:620px}
     .court-card{display:flex;justify-content:space-between;align-items:center;background:#fff;border:2px solid var(--gold);border-radius:14px;padding:12px 14px;transition:.2s box-shadow,.2s transform}
     .court-card:hover{box-shadow:0 8px 22px #00000014;transform:translateY(-2px)}
     .court-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:10px;background:#fff;border:1px solid var(--line);margin-left:10px}
     .court-icon svg{width:24px;height:24px;fill:var(--gold)}
+    /* Sections */
     section{padding:54px 0}
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:0 6px 18px #0b102006}
     .value{display:flex;gap:14px;align-items:flex-start}
     .icon{width:54px;height:54px;flex:0 0 54px;display:grid;place-items:center;border-radius:14px;background:var(--gold-ghost);border:1px solid var(--gold)}
     .icon svg{width:30px;height:30px;fill:var(--gold)}
+    /* About detail (Mission / Vision / Languages) */
     .mv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
     .mv{display:flex;gap:12px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
     .mv svg{width:28px;height:28px;fill:var(--gold);flex:0 0 28px}
+    /* TEAM — proportional */
     .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;align-items:start}
     .team-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;text-align:center;box-shadow:0 6px 18px #0b102006;transition:transform .2s ease, box-shadow .2s ease}
     .team-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px #00000018}
     .team-photo{width:180px;height:180px;border-radius:50%;object-fit:cover;border:4px solid var(--gold);display:block;margin:6px auto 12px}
     .role{color:var(--muted);font-size:14px;margin-top:4px}
+    /* Contact */
     .contact .grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px}
     .contact form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px}
     label{font-size:14px;color:var(--muted)} input,textarea{width:100%;background:#fff;color:#0f172a;border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:6px}
@@ -239,6 +248,37 @@
         <div class="card value">
           <div class="icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z"/></svg></div>
           <div><b>International & Human Rights</b><p class="lead">Public/private international law and humanitarian rights.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Successful Cases (new section) -->
+  <section id="cases">
+    <div class="container">
+      <div class="hrow"><svg viewBox="0 0 24 24"><path d="M4 7h16v2H4V7zm0 4h16v8H4v-8zm6-8h4v2h-4V3z"/></svg><h2>Successful cases</h2></div>
+      <div class="card" style="display:flex;gap:16px;align-items:flex-start">
+        <div class="icon" aria-hidden="true">
+          <!-- Minimalist labor-law icon (scales/briefcase style) -->
+          <svg viewBox="0 0 24 24"><path d="M4 7h16v2H4V7zm2 3h12l2 9H4l2-9zm4-7h4v3h-4V3zM7 6h10V5a2 2 0 00-2-2h-6a2 2 0 00-2 2v1z"/></svg>
+        </div>
+        <div>
+          <b>Caracol Televisión S.A. vs. Journalist — SL2885‑2019 (Supreme Court of Justice)</b>
+          <p class="lead" style="margin-top:6px">
+            <b>Object:</b> Recognition of a real employment relationship and labor benefits for a journalist engaged under successive service contracts.
+          </p>
+          <p class="lead">
+            <b>Relevance:</b> Reaffirms the <i>primacy of reality over formalities</i>: if subordination and continuity are proven, the relationship is labor‑based regardless of contract labels.
+          </p>
+          <p class="lead">
+            <b>Milestone:</b> Landmark guidance for media and creative industries on disguised employment, strengthening protections for workers.
+          </p>
+          <p class="lead">
+            <b>Outcome & Compensation:</b> Recognition of the employment link and payment of <b>more than two billion Colombian pesos</b> in accrued salaries, benefits, and severance.
+          </p>
+          <p class="lead">
+            <b>Court actions:</b> Analysis of continuous/exclusive services, editorial subordination, application of Article 23 of the <i>Código Sustantivo del Trabajo</i>, and ruling in favor of the plaintiff.
+          </p>
         </div>
       </div>
     </div>
